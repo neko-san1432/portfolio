@@ -26,30 +26,73 @@
     </div>
   </header>
 
+  <!-- Pixel Title Header -->
+  <div class="pixel-banner">
+    <!-- Pixel Cat Left -->
+    <svg class="pixel-cat" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" style="image-rendering: pixelated;">
+      <rect x="2" y="2" width="2" height="2" fill="#ff0055" />
+      <rect x="12" y="2" width="2" height="2" fill="#ff0055" />
+      <rect x="2" y="4" width="12" height="10" fill="#1e293b" />
+      <rect x="4" y="2" width="8" height="2" fill="#1e293b" />
+      <rect x="4" y="6" width="2" height="2" fill="#00f0ff" />
+      <rect x="10" y="6" width="2" height="2" fill="#00f0ff" />
+      <rect x="7" y="9" width="2" height="1" fill="#ff0055" />
+    </svg>
+    <h1 class="pixel-title">NEKO-SAN</h1>
+    <!-- Pixel Cat Right -->
+    <svg class="pixel-cat" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" style="image-rendering: pixelated;">
+      <rect x="2" y="2" width="2" height="2" fill="#ff0055" />
+      <rect x="12" y="2" width="2" height="2" fill="#ff0055" />
+      <rect x="2" y="4" width="12" height="10" fill="#bd00ff" />
+      <rect x="4" y="2" width="8" height="2" fill="#bd00ff" />
+      <rect x="4" y="6" width="2" height="2" fill="#00f0ff" />
+      <rect x="10" y="6" width="2" height="2" fill="#00f0ff" />
+      <rect x="7" y="9" width="2" height="1" fill="#ff0055" />
+    </svg>
+  </div>
+
   <!-- Main Grid Layout -->
-  <main class="main-container">
+  <main class="main-container" style="max-width: 1000px; margin-top: 0;">
     
-    <section class="hud-panel" style="padding: 1.5rem 2.5rem 0.5rem 2.5rem;">
-      <h1 class="glitch-title" style="font-size: 2.2rem; margin-bottom: 0.5rem;">PROJECT ARCHIVES</h1>
-      <p class="tagline">Query the active database of system implementations and repositories.</p>
-    </section>
-
-    <!-- Query Filter Bar -->
-    <section class="filter-bar">
-      <input type="text" id="project-search" class="search-input" placeholder="RUN QUERY (Search title, tag, or tech stack...)">
-      
-      <div class="filter-btn-group">
-        <button class="filter-btn active" data-filter="all">ALL_RECORDS</button>
-        <button class="filter-btn" data-filter="local">LOCAL_ONLY</button>
-        <button class="filter-btn" data-filter="github">GITHUB_ONLY</button>
-        <button class="filter-btn" data-filter="systems">SYSTEMS_ENG</button>
+    <!-- macOS style Terminal window explorer -->
+    <div class="terminal-window">
+      <div class="terminal-titlebar">
+        <div class="window-dots">
+          <span class="window-dot red"></span>
+          <span class="window-dot yellow"></span>
+          <span class="window-dot green"></span>
+        </div>
+        <div class="window-title">neko-san@explorer: ~</div>
       </div>
-    </section>
+      
+      <div class="terminal-body">
+        <div class="prompt-line">neko-san:~$ <span>query archives --filter=active</span></div>
+        <div class="terminal-desc">
+          > DB EXPORTER INITIALIZED.<br>
+          > Use input prompt to search files and repositories. Select system categories using filtering buttons below.
+        </div>
+        
+        <!-- Query Filter Bar -->
+        <div class="filter-bar" style="margin: 1.5rem 0;">
+          <input type="text" id="project-search" class="search-input" placeholder="RUN QUERY (Search title, tag, or tech stack...)">
+          
+          <div class="filter-btn-group">
+            <button class="filter-btn active" data-filter="all">ALL_RECORDS</button>
+            <button class="filter-btn" data-filter="local">LOCAL_ONLY</button>
+            <button class="filter-btn" data-filter="github">GITHUB_ONLY</button>
+            <button class="filter-btn" data-filter="systems">SYSTEMS_ENG</button>
+          </div>
+        </div>
 
-    <!-- Dynamic Cards Output -->
-    <section class="projects-grid" id="projects-container">
-      <!-- Generated Dynamically by app.js -->
-    </section>
+        <div class="prompt-line">neko-san:~$ <span>show filtered-results</span></div>
+        
+        <!-- Dynamic Cards Output -->
+        <div class="skills-arsenal-grid" id="projects-container" style="margin-top: 1.5rem;">
+          <!-- Generated Dynamically by app.js -->
+        </div>
+        
+      </div>
+    </div>
 
   </main>
 

@@ -3,10 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>neko-san1432 // QUANTUM HUD PORTFOLIO</title>
-  <meta name="description" content="Futuristic multi-page developer portfolio showcasing thesis and quantitative systems.">
+  <title>neko-san1432 // CONSOLE CONSOLE</title>
+  <meta name="description" content="Futuristic multi-page retro developer portfolio showcasing thesis and quantitative systems.">
   <link rel="stylesheet" href="styles.css">
-  <!-- Three.js Library -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 </head>
 <body>
@@ -27,18 +26,51 @@
     </div>
   </header>
 
+  <!-- Pixel Title Header -->
+  <div class="pixel-banner">
+    <!-- Pixel Cat Left -->
+    <svg class="pixel-cat" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" style="image-rendering: pixelated;">
+      <rect x="2" y="2" width="2" height="2" fill="#ff0055" />
+      <rect x="12" y="2" width="2" height="2" fill="#ff0055" />
+      <rect x="2" y="4" width="12" height="10" fill="#1e293b" />
+      <rect x="4" y="2" width="8" height="2" fill="#1e293b" />
+      <rect x="4" y="6" width="2" height="2" fill="#00f0ff" />
+      <rect x="10" y="6" width="2" height="2" fill="#00f0ff" />
+      <rect x="7" y="9" width="2" height="1" fill="#ff0055" />
+    </svg>
+    <h1 class="pixel-title">NEKO-SAN</h1>
+    <!-- Pixel Cat Right -->
+    <svg class="pixel-cat" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" style="image-rendering: pixelated;">
+      <rect x="2" y="2" width="2" height="2" fill="#ff0055" />
+      <rect x="12" y="2" width="2" height="2" fill="#ff0055" />
+      <rect x="2" y="4" width="12" height="10" fill="#bd00ff" />
+      <rect x="4" y="2" width="8" height="2" fill="#bd00ff" />
+      <rect x="4" y="6" width="2" height="2" fill="#00f0ff" />
+      <rect x="10" y="6" width="2" height="2" fill="#00f0ff" />
+      <rect x="7" y="9" width="2" height="1" fill="#ff0055" />
+    </svg>
+  </div>
+
   <!-- Main HUD Workspace -->
   <main class="main-container">
     
-    <!-- Hero / 3D Hologram Presentation Layer -->
-    <section class="hologram-layout">
+    <!-- macOS style Terminal window containing 3D Pixel Projector -->
+    <div class="terminal-window">
+      <div class="terminal-titlebar">
+        <div class="window-dots">
+          <span class="window-dot red"></span>
+          <span class="window-dot yellow"></span>
+          <span class="window-dot green"></span>
+        </div>
+        <div class="window-title">neko-san@projector: ~</div>
+      </div>
       
-      <!-- Three.js Hologram Viewport -->
-      <div class="hud-panel hologram-container" id="hologram-viewport">
+      <!-- Three.js low-res display -->
+      <div class="hologram-viewport-container" id="hologram-viewport">
         <div class="hologram-hud-overlay">
           <div class="hologram-label">
             <span>PROJECTOR STATE: ACTIVE</span>
-            <span>GRID_v4.5</span>
+            <span>PIXEL_GRID_v4.5</span>
           </div>
           <div class="hologram-telemetry">
             <div>SCANNING_FREQ: <span id="hud-scan-value">245.50 MHz</span></div>
@@ -48,96 +80,56 @@
         </div>
       </div>
 
-      <!-- Quick Telemetry Dossier Panel -->
-      <div class="info-panel">
-        <div class="hud-panel">
-          <div class="panel-header">
-            <span>TACTICAL OVERVIEW</span>
-            <span>[SYS_INIT]</span>
-          </div>
-          <div class="panel-body">
-            <h1 class="glitch-title">neko-san1432</h1>
-            <p class="tagline">Full Stack Developer • System Engineer • Quantitative Trading Systems Engineer</p>
-            <div class="terminal-desc">
-              > IDENTITY VERIFIED.<br>
-              > SPECIALIZATION: Core Systems Architecture, High-Performance Analytics, Volatility Strategy Engines & 3D Simulations.
-            </div>
-            
-            <h4 style="margin-bottom: 0.8rem; font-family: var(--font-hud); color: var(--primary);">PREFERRED PROGRAMMING DIALECTS:</h4>
-            <div class="skills-grid">
-              <span class="skill-tag hologram-trigger" data-hologram-type="drims">Go</span>
-              <span class="skill-tag hologram-trigger" data-hologram-type="drims">Python</span>
-              <span class="skill-tag hologram-trigger" data-hologram-type="drims">JS</span>
-              <span class="skill-tag hologram-trigger" data-hologram-type="drims">TS</span>
-              <span class="skill-tag hologram-trigger" data-hologram-type="colorgame">C++</span>
-              <span class="skill-tag hologram-trigger" data-hologram-type="colorgame">C#</span>
-              <span class="skill-tag hologram-trigger" data-hologram-type="predator">Kotlin</span>
-              <span class="skill-tag hologram-trigger" data-hologram-type="predator">Swift</span>
-            </div>
-          </div>
+      <div class="terminal-body">
+        <div class="prompt-line">neko-san:~$ <span>run telemetry-summary</span></div>
+        <div class="terminal-desc">
+          > IDENTITY VERIFIED: neko-san1432<br>
+          > ROLES: Full Stack Developer // System Engineer // Quantitative Trading Systems Engineer<br>
+          > OPERATIONS: Volatility trade engines, client-side Web3D simulations, and geospatial analytics.
         </div>
+        <div class="prompt-line">neko-san:~$ <span class="cursor">_</span></div>
       </div>
-    </section>
+    </div>
 
     <!-- Featured Projects Grid Section -->
     <section>
-      <h2 class="featured-header">
-        <span>FEATURED OPERATION ARCHIVES</span>
-        <a href="projects.html" style="font-size: 0.9rem; color: var(--text-muted); text-decoration: none; text-transform: uppercase;">View All [++]</a>
-      </h2>
-      <br>
+      <h2 class="skills-arsenal-title" style="text-align: left; margin: 2rem 0 1rem 0;">FEATURED ARCHIVES</h2>
       
-      <div class="projects-grid">
+      <div class="skills-arsenal-grid">
         
         <!-- CitizenLink (D.R.I.M.S.) Card -->
-        <div class="hud-panel project-card hologram-trigger" data-hologram-type="drims" onclick="openProjectModal('drims')">
-          <div class="project-image-placeholder">
-            <div class="project-badge local">THESIS</div>
-            <div class="project-graphic-hud">CitizenLink 2.0</div>
-          </div>
-          <div class="project-card-content">
-            <div>
-              <h3 class="project-card-title">CitizenLink 2.0 (D.R.I.M.S.)</h3>
-              <p class="project-card-desc">Advanced Complaint Management System with Hybrid NLP routing and DBSCAN geospatial heatmapping.</p>
-            </div>
-            <div class="project-card-tech">
-              <span>[Node.js]</span> <span>[Express]</span> <span>[Supabase]</span> <span>[DBSCAN]</span>
-            </div>
-          </div>
+        <div class="skill-arsenal-card hologram-trigger" data-hologram-type="drims" onclick="openProjectModal('drims')">
+          <div class="card-badge local">THESIS</div>
+          <svg class="skill-icon-svg" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" style="image-rendering: pixelated;">
+            <rect x="2" y="2" width="12" height="12" fill="#00f0ff" />
+            <rect x="4" y="4" width="8" height="8" fill="#060913" />
+            <rect x="6" y="6" width="4" height="4" fill="#ff0055" />
+          </svg>
+          <div class="skill-name" style="margin-top: 0.5rem;">CitizenLink</div>
+          <div class="skill-sub">Web App</div>
         </div>
 
         <!-- 3D Color Game Card -->
-        <div class="hud-panel project-card accent-purple hologram-trigger" data-hologram-type="colorgame" onclick="openProjectModal('colorgame')">
-          <div class="project-image-placeholder">
-            <div class="project-badge local">PHYSICS</div>
-            <div class="project-graphic-hud">Perya Sim</div>
-          </div>
-          <div class="project-card-content">
-            <div>
-              <h3 class="project-card-title">3D Color Game Simulator</h3>
-              <p class="project-card-desc">Interactive Three.js physics-based simulation of the traditional Filipino color game.</p>
-            </div>
-            <div class="project-card-tech">
-              <span>[Three.js]</span> <span>[Rapier3D]</span> <span>[TypeScript]</span> <span>[Vite]</span>
-            </div>
-          </div>
+        <div class="skill-arsenal-card hologram-trigger" data-hologram-type="colorgame" onclick="openProjectModal('colorgame')">
+          <div class="card-badge local">PHYSICS</div>
+          <svg class="skill-icon-svg" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" style="image-rendering: pixelated;">
+            <rect x="3" y="3" width="10" height="10" fill="#bd00ff" />
+            <rect x="5" y="5" width="2" height="2" fill="#fff" />
+            <rect x="9" y="9" width="2" height="2" fill="#fff" />
+          </svg>
+          <div class="skill-name" style="margin-top: 0.5rem;">Perya Sim</div>
+          <div class="skill-sub">Simulation</div>
         </div>
 
         <!-- Predator Bot EA Card -->
-        <div class="hud-panel project-card under-maintenance hologram-trigger" data-hologram-type="predator" onclick="openProjectModal('predator')">
-          <div class="project-image-placeholder">
-            <div class="project-badge maintenance">MAINTENANCE</div>
-            <div class="project-graphic-hud">Predator Bot</div>
-          </div>
-          <div class="project-card-content">
-            <div>
-              <h3 class="project-card-title">Predator Bot (EA)</h3>
-              <p class="project-card-desc">Quantitative trading systems and Expert Advisor bots for MetaTrader 5 (MQL5).</p>
-            </div>
-            <div class="project-card-tech">
-              <span>[MQL5]</span> <span>[Pine Script]</span> <span>[Python]</span>
-            </div>
-          </div>
+        <div class="skill-arsenal-card under-maintenance hologram-trigger" data-hologram-type="predator" onclick="openProjectModal('predator')">
+          <div class="card-badge maintenance">MAINT</div>
+          <svg class="skill-icon-svg" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" style="image-rendering: pixelated;">
+            <rect x="2" y="7" width="12" height="2" fill="#ff0055" />
+            <rect x="7" y="2" width="2" height="12" fill="#ff0055" />
+          </svg>
+          <div class="skill-name" style="margin-top: 0.5rem;">Predator</div>
+          <div class="skill-sub">MQL5 / EA</div>
         </div>
 
       </div>

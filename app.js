@@ -60,10 +60,10 @@ const PROJECTS = [
 
 // Three.js Hologram Variables
 let scene, camera, renderer;
-let hologramSphere, particleSystem, scanningRing;
+let hologramMesh, particleSystem, scanningRing;
 let animationFrameId;
 
-// Initialize Three.js Hologram
+// Initialize Three.js Voxel/Pixel Hologram
 function initHologram() {
   const container = document.getElementById('hologram-viewport');
   if (!container) return;
@@ -77,84 +77,78 @@ function initHologram() {
 
   // Camera
   camera = new THREE.PerspectiveCamera(45, width / height, 1, 1000);
-  camera.position.z = 200;
+  camera.position.z = 180;
 
   // Renderer
   const canvas = document.createElement('canvas');
   canvas.id = 'canvas3d';
   container.appendChild(canvas);
 
-  renderer = new THREE.WebGLRenderer({ canvas: canvas, antialias: true, alpha: true });
-  renderer.setSize(width, height);
-  renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+  renderer = new THREE.WebGLRenderer({ canvas: canvas, antialias: false, alpha: true });
+  // Set renderer size to 1/4 of container to create standard low-res retro pixelated look
+  renderer.setSize(width / 4, height / 4, false);
+  renderer.setPixelRatio(1);
 
   // Hologram Object Group
   const hologramGroup = new THREE.Group();
   scene.add(hologramGroup);
 
-  // 1. Globe Wireframe (Icosahedron)
-  const sphereGeo = new THREE.IcosahedronGeometry(50, 2);
+  // 1. Low-poly Voxel Icosahedron (Representing the server core)
+  const sphereGeo = new THREE.IcosahedronGeometry(45, 1);
   const wireframeMat = new THREE.MeshBasicMaterial({
     color: 0x00f0ff,
     wireframe: true,
     transparent: true,
-    opacity: 0.25
+    opacity: 0.4
   });
-  hologramSphere = new THREE.Mesh(sphereGeo, wireframeMat);
-  hologramGroup.add(hologramSphere);
+  hologramMesh = new THREE.Mesh(sphereGeo, wireframeMat);
+  hologramGroup.add(hologramMesh);
 
-  // 2. Inner Dot Sphere
-  const innerSphereGeo = new THREE.IcosahedronGeometry(48, 1);
-  const innerPointsMat = new THREE.PointsMaterial({
+  // 2. Center Voxel Core
+  const coreGeo = new THREE.BoxGeometry(20, 20, 20);
+  const coreMat = new THREE.MeshBasicMaterial({
     color: 0xbd00ff,
-    size: 1.5,
+    wireframe: true,
     transparent: true,
     opacity: 0.6
   });
-  const innerPoints = new THREE.Points(innerSphereGeo, innerPointsMat);
-  hologramGroup.add(innerPoints);
+  const coreMesh = new THREE.Mesh(coreGeo, coreMat);
+  hologramGroup.add(coreMesh);
 
-  // 3. Orbiting Particles
+  // 3. Floating Pixel Particles
   const particleGeo = new THREE.BufferGeometry();
-  const particleCount = 180;
+  const particleCount = 100;
   const positions = new Float32Array(particleCount * 3);
-  const velocities = [];
 
   for (let i = 0; i < particleCount; i++) {
-    // Distribute randomly in a shell of radius 60 to 80
     const theta = Math.random() * Math.PI * 2;
     const phi = Math.acos((Math.random() * 2) - 1);
-    const radius = 60 + Math.random() * 20;
+    const radius = 50 + Math.random() * 15;
 
     positions[i * 3] = radius * Math.sin(phi) * Math.cos(theta);
     positions[i * 3 + 1] = radius * Math.sin(phi) * Math.sin(theta);
     positions[i * 3 + 2] = radius * Math.cos(phi);
-
-    velocities.push({
-      x: (Math.random() - 0.5) * 0.05,
-      y: (Math.random() - 0.5) * 0.05,
-      z: (Math.random() - 0.5) * 0.05
-    });
   }
 
   particleGeo.setAttribute('position', new THREE.BufferAttribute(positions, 3));
   const particleMat = new THREE.PointsMaterial({
     color: 0x00f0ff,
-    size: 2,
+    size: 3, // Larger blocky dots
     transparent: true,
-    opacity: 0.5
+    opacity: 0.6
   });
 
   particleSystem = new THREE.Points(particleGeo, particleMat);
   hologramGroup.add(particleSystem);
 
   // 4. Scanning Ring
-  const ringGeo = new THREE.RingGeometry(52, 53, 64);
+  const ringGeo = new THREE.RingGeometry(48, 50, 8);
   const ringMat = new THREE.MeshBasicMaterial({
     color: 0x00f0ff,
     side: THREE.DoubleSide,
     transparent: true,
-    opacity: 0.5
+    opacity: 0.5,
+    wireframe: true
   });
   scanningRing = new THREE.Mesh(ringGeo, ringMat);
   scanningRing.rotation.x = Math.PI / 2;
@@ -164,7 +158,7 @@ function initHologram() {
   const light = new THREE.AmbientLight(0xffffff, 0.8);
   scene.add(light);
 
-  // Telemetry info panel references
+  // Telemetry indicators references
   const scanVal = document.getElementById('hud-scan-value');
   const rotVal = document.getElementById('hud-rot-value');
   const signalVal = document.getElementById('hud-signal-value');
@@ -179,20 +173,18 @@ function initHologram() {
     const delta = clock.getDelta();
     time += delta;
 
-    // Rotate core structures
-    hologramSphere.rotation.y += 0.005;
-    hologramSphere.rotation.x += 0.002;
-    innerPoints.rotation.y -= 0.003;
+    // Rotate core meshes
+    hologramMesh.rotation.y += 0.005;
+    hologramMesh.rotation.x += 0.002;
+    coreMesh.rotation.y -= 0.008;
+    coreMesh.rotation.z += 0.004;
 
-    // Wobble and move particle positions slightly
+    // Orbit behavior for particle systems
     const posAttr = particleSystem.geometry.attributes.position;
     for (let i = 0; i < particleCount; i++) {
       let x = posAttr.getX(i);
-      let y = posAttr.getY(i);
       let z = posAttr.getZ(i);
-
-      // Orbit behavior (simple rotation around Y axis)
-      const speed = 0.002;
+      const speed = 0.003;
       const nx = x * Math.cos(speed) - z * Math.sin(speed);
       const nz = x * Math.sin(speed) + z * Math.cos(speed);
 
@@ -201,18 +193,16 @@ function initHologram() {
     }
     posAttr.needsUpdate = true;
 
-    // Scanning Ring Sweep (moving up and down)
-    scanningRing.position.y = Math.sin(time * 1.5) * 50;
-    
-    // Rotate ring slightly for flavor
-    scanningRing.rotation.z += 0.01;
+    // Scanning Ring sweep
+    scanningRing.position.y = Math.sin(time * 1.5) * 45;
+    scanningRing.rotation.z += 0.008;
 
-    // Dynamic telemetry updates
+    // Telemetry updates
     if (scanVal && Math.random() < 0.1) {
       scanVal.textContent = (Math.sin(time) * 100 + 100).toFixed(2) + " MHz";
     }
     if (rotVal && Math.random() < 0.1) {
-      rotVal.textContent = "Y: " + (hologramSphere.rotation.y % (Math.PI * 2)).toFixed(2) + " RAD";
+      rotVal.textContent = "Y: " + (hologramMesh.rotation.y % (Math.PI * 2)).toFixed(2) + " RAD";
     }
     if (signalVal && Math.random() < 0.05) {
       signalVal.textContent = (90 + Math.random() * 9.8).toFixed(1) + "% SECURE";
@@ -237,32 +227,32 @@ function onWindowResize() {
   camera.aspect = width / height;
   camera.updateProjectionMatrix();
 
-  renderer.setSize(width, height);
+  renderer.setSize(width / 4, height / 4, false);
 }
 
 // Morph Hologram Visual States based on hovered items
 function morphHologram(projectType) {
-  if (!hologramSphere || !particleSystem || !scanningRing) return;
+  if (!hologramMesh || !particleSystem || !scanningRing) return;
 
   switch (projectType) {
     case 'drims':
-      hologramSphere.material.color.setHex(0x00f0ff); // Cyan
+      hologramMesh.material.color.setHex(0x00f0ff); // Cyan
       particleSystem.material.color.setHex(0xbd00ff); // Violet
       scanningRing.scale.set(1.2, 1.2, 1);
       break;
     case 'colorgame':
-      hologramSphere.material.color.setHex(0x00ff75); // Neon Green
+      hologramMesh.material.color.setHex(0x00ff75); // Neon Green
       particleSystem.material.color.setHex(0x00f0ff);
       scanningRing.scale.set(1.0, 1.0, 1);
       break;
     case 'predator':
-      hologramSphere.material.color.setHex(0xff0055); // Red Alert
+      hologramMesh.material.color.setHex(0xff0055); // Red Alert
       particleSystem.material.color.setHex(0xffaa00); // Amber
-      scanningRing.scale.set(1.4, 1.4, 1);
+      scanningRing.scale.set(1.3, 1.3, 1);
       break;
     default:
-      hologramSphere.material.color.setHex(0x00f0ff);
-      particleSystem.material.color.setHex(0x00f0ff);
+      hologramMesh.material.color.setHex(0x00f0ff);
+      particleSystem.material.color.setHex(0xbd00ff);
       scanningRing.scale.set(1, 1, 1);
       break;
   }
@@ -308,7 +298,7 @@ function openProjectModal(id) {
     </div>
     <div class="modal-section">
       <div class="modal-section-title">DETAILED OVERVIEW</div>
-      <p style="font-size:0.95rem; line-height:1.6; margin-bottom:1rem;">${project.details}</p>
+      <p style="font-size:0.95rem; line-height:1.6; margin-bottom:1rem; font-family:var(--font-hud);">${project.details}</p>
     </div>
   `;
 
@@ -316,7 +306,7 @@ function openProjectModal(id) {
   techGrid.innerHTML = '';
   project.tech.forEach(t => {
     const span = document.createElement('span');
-    span.className = 'skill-tag' + (project.id === 'colorgame' ? ' purple' : '');
+    span.className = 'skill-tag';
     span.textContent = t;
     techGrid.appendChild(span);
   });
@@ -332,7 +322,52 @@ function openProjectModal(id) {
   overlay.classList.add('active');
 }
 
-// Render Project Cards dynamically
+// Custom language logo helper
+function getSkillIcon(id) {
+  switch(id) {
+    case 'drims':
+      return `
+        <svg class="skill-icon-svg" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" style="image-rendering: pixelated;">
+          <rect x="2" y="2" width="12" height="12" fill="#00f0ff" />
+          <rect x="4" y="4" width="8" height="8" fill="#060913" />
+          <rect x="6" y="6" width="4" height="4" fill="#ff0055" />
+        </svg>
+      `;
+    case 'colorgame':
+      return `
+        <svg class="skill-icon-svg" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" style="image-rendering: pixelated;">
+          <rect x="3" y="3" width="10" height="10" fill="#bd00ff" />
+          <rect x="5" y="5" width="2" height="2" fill="#fff" />
+          <rect x="9" y="9" width="2" height="2" fill="#fff" />
+        </svg>
+      `;
+    case 'predator':
+      return `
+        <svg class="skill-icon-svg" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" style="image-rendering: pixelated;">
+          <rect x="2" y="7" width="12" height="2" fill="#ff0055" />
+          <rect x="7" y="2" width="2" height="12" fill="#ff0055" />
+        </svg>
+      `;
+    case 'criticart':
+      return `
+        <svg class="skill-icon-svg" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" style="image-rendering: pixelated;">
+          <rect x="4" y="2" width="8" height="12" fill="#eab308" />
+          <rect x="6" y="4" width="4" height="4" fill="#000" />
+        </svg>
+      `;
+    case 'ettiquetta':
+      return `
+        <svg class="skill-icon-svg" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" style="image-rendering: pixelated;">
+          <rect x="1" y="4" width="14" height="8" fill="#f43f5e" />
+          <circle cx="8" cy="8" r="3" fill="#fff" />
+        </svg>
+      `;
+    default:
+      return '';
+  }
+}
+
+// Render Project Cards dynamically matching pixel-style dossier card grid
 function renderProjects(filter = 'all', searchQuery = '') {
   const container = document.getElementById('projects-container');
   if (!container) return;
@@ -359,31 +394,20 @@ function renderProjects(filter = 'all', searchQuery = '') {
 
   filtered.forEach(p => {
     const card = document.createElement('div');
-    card.className = `hud-panel project-card ${p.isMaintenance ? 'under-maintenance' : ''} ${p.id === 'colorgame' ? 'accent-purple' : ''}`;
+    card.className = `skill-arsenal-card ${p.isMaintenance ? 'under-maintenance' : ''}`;
     card.innerHTML = `
-      <div class="project-image-placeholder">
-        <div class="project-badge ${p.isMaintenance ? 'maintenance' : p.isLocal ? 'local' : ''}">
-          ${p.isMaintenance ? 'MAINTENANCE' : p.isLocal ? 'LOCAL' : 'GITHUB'}
-        </div>
-        <div class="project-graphic-hud">${p.id} telemetry</div>
+      <div class="card-badge ${p.isMaintenance ? 'maintenance' : p.isLocal ? 'local' : ''}">
+        ${p.isMaintenance ? 'MAINT' : p.isLocal ? 'LOCAL' : 'REPO'}
       </div>
-      <div class="project-card-content">
-        <div>
-          <h3 class="project-card-title">${p.title}</h3>
-          <p class="project-card-desc">${p.description}</p>
-        </div>
-        <div class="project-card-tech">
-          ${p.tech.slice(0, 3).map(t => `<span>[${t}]</span>`).join(' ')}
-          ${p.tech.length > 3 ? `<span>[+${p.tech.length - 3}]</span>` : ''}
-        </div>
-      </div>
+      ${getSkillIcon(p.id)}
+      <div class="skill-name" style="margin-top: 0.5rem;">${p.title.split(' ')[0]}</div>
+      <div class="skill-sub">${p.badge}</div>
     `;
 
     card.addEventListener('click', () => {
       openProjectModal(p.id);
     });
 
-    // Hover effects on cards interact with the 3D hologram (if present on index.html)
     card.addEventListener('mouseenter', () => {
       morphHologram(p.id);
     });
@@ -401,7 +425,6 @@ function runTypewriter(element, speed = 10) {
   const content = element.innerHTML;
   element.innerHTML = '';
   let partIndex = 0;
-  // Splits by HTML tags so elements like <br> are output atomically
   const tokens = content.split(/(<[^>]*>)/g);
   
   function typeNextToken() {
@@ -485,4 +508,3 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
-
