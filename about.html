@@ -1,134 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Neko-San | About</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Neko-San // Dev Status Profile</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="cats.css">
 </head>
-<body>
-    <header>
-        <div class="logo-container">
-            <!-- Left Cat -->
-            <svg class="pixel-cat" viewBox="0 0 16 16" width="40" height="40">
-                <style>
-                    .body-dark { fill: #2a2b36; }
-                    .eye-cyan { fill: #00f0ff; }
-                    .accent-cyan { fill: #00b4d8; }
-                </style>
-                <rect x="2" y="2" width="2" height="3" class="body-dark"/>
-                <rect x="12" y="2" width="2" height="3" class="body-dark"/>
-                <rect x="3" y="4" width="10" height="8" class="body-dark"/>
-                <rect x="2" y="5" width="12" height="6" class="body-dark"/>
-                <rect x="4" y="7" width="2" height="2" class="eye-cyan"/>
-                <rect x="10" y="7" width="2" height="2" class="eye-cyan"/>
-                <rect x="4" y="11" width="8" height="1" class="accent-cyan"/>
-                <rect x="4" y="12" width="8" height="3" class="body-dark"/>
-                <rect x="3" y="14" width="2" height="1" class="body-dark"/>
-                <rect x="11" y="14" width="2" height="1" class="body-dark"/>
-                <rect x="1" y="10" width="1" height="4" class="body-dark"/>
-                <rect x="2" y="9" width="1" height="1" class="body-dark"/>
+<body class="crt-flicker">
+  <header>
+    <div class="container nav-container">
+      <div class="logo">&lt;NEKO-SAN_SYS&gt;</div>
+      <nav>
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="projects.html">PROJECTS</a></li>
+          <li><a href="about.html" class="active">ABOUT</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <div style="text-align: center; margin-bottom: 45px;">
+      <h1 class="glitch" data-text="DEV STATUS SCREEN" style="font-size: 28px;">DEV STATUS SCREEN</h1>
+      <p style="font-family: var(--font-pixel); font-size: 10px; color: var(--neon-magenta);">[AUDIT DEV METRICS & TELEMETRY CONNECTIONS]</p>
+    </div>
+
+    <div style="display: flex; gap: 30px; flex-wrap: wrap;">
+      <!-- Profile Side card (RPG Stats style) -->
+      <div class="card-retro" style="flex: 1; min-width: 300px;">
+        <div class="card-tag">CHARACTER_SHEET</div>
+        <div style="display: flex; gap: 20px; align-items: center; margin-bottom: 20px;">
+          <!-- Custom Pink Calico Cat Profile Icon -->
+          <div style="width: 64px; height: 64px;">
+            <svg viewBox="0 0 16 16" shape-rendering="crispEdges">
+              <g class="tail-right">
+                <rect x="13" y="11" width="1" height="2" fill="#ff007f" />
+                <rect x="14" y="9" width="1" height="2" fill="#ff007f" />
+                <rect x="13" y="8" width="1" height="1" fill="#ff007f" />
+              </g>
+              <rect x="2" y="1" width="1" height="2" fill="#ff007f" />
+              <rect x="3" y="2" width="1" height="2" fill="#00f0ff" />
+              <rect x="4" y="2" width="1" height="2" fill="#ff007f" />
+              <rect x="12" y="1" width="1" height="2" fill="#ff007f" />
+              <rect x="11" y="2" width="1" height="2" fill="#00f0ff" />
+              <rect x="10" y="2" width="1" height="2" fill="#ff007f" />
+              <rect x="3" y="4" width="5" height="1" fill="#ff007f" />
+              <rect x="8" y="4" width="3" height="1" fill="#00f0ff" />
+              <rect x="2" y="5" width="6" height="1" fill="#ff007f" />
+              <rect x="8" y="5" width="4" height="1" fill="#00f0ff" />
+              <rect x="12" y="5" width="1" height="1" fill="#ff007f" />
+              <rect x="2" y="6" width="11" height="1" fill="#ff007f" />
+              <rect x="4" y="6" width="1" height="1" fill="#00f0ff" />
+              <rect x="10" y="6" width="1" height="1" fill="#00f0ff" />
+              <rect x="3" y="7" width="1" height="1" fill="#fafafa" />
+              <rect x="11" y="7" width="1" height="1" fill="#fafafa" />
+              <rect x="7" y="7" width="1" height="1" fill="#00f0ff" />
+              <rect x="3" y="8" width="9" height="1" fill="#ff007f" />
+              <rect x="3" y="9" width="2" height="1" fill="#1f2335" />
+              <rect x="5" y="9" width="7" height="1" fill="#ff007f" />
+              <rect x="3" y="10" width="3" height="1" fill="#1f2335" />
+              <rect x="6" y="10" width="6" height="1" fill="#ff007f" />
+              <rect x="3" y="11" width="9" height="3" fill="#ff007f" />
+              <rect x="4" y="14" width="2" height="1" fill="#fafafa" />
+              <rect x="9" y="14" width="2" height="1" fill="#fafafa" />
             </svg>
-
-            <span class="logo-text">Neko-San</span>
-
-            <!-- Right Cat -->
-            <svg class="pixel-cat" viewBox="0 0 16 16" width="40" height="40">
-                <style>
-                    .body-pink { fill: #ff2e93; }
-                    .eye-dark { fill: #0f1016; }
-                    .accent-cyan2 { fill: #00f0ff; }
-                </style>
-                <rect x="2" y="2" width="2" height="3" class="body-pink"/>
-                <rect x="12" y="2" width="2" height="3" class="body-pink"/>
-                <rect x="3" y="4" width="10" height="8" class="body-pink"/>
-                <rect x="2" y="5" width="12" height="6" class="body-pink"/>
-                <rect x="4" y="7" width="2" height="2" class="eye-dark"/>
-                <rect x="10" y="7" width="2" height="2" class="eye-dark"/>
-                <rect x="4" y="11" width="8" height="1" class="accent-cyan2"/>
-                <rect x="4" y="12" width="8" height="3" class="body-pink"/>
-                <rect x="3" y="14" width="2" height="1" class="body-pink"/>
-                <rect x="11" y="14" width="2" height="1" class="body-pink"/>
-                <rect x="14" y="10" width="1" height="4" class="body-pink"/>
-                <rect x="13" y="9" width="1" height="1" class="body-pink"/>
-            </svg>
-        </div>
-        <nav>
-            <a href="index.html">~/home</a>
-            <a href="projects.html">~/projects</a>
-            <a href="about.html" class="active">~/about</a>
-        </nav>
-    </header>
-
-    <main>
-        <div class="about-container">
-            <div class="about-header">
-                <h1 class="about-title">Systems diagnostics</h1>
-                <div class="about-subtitle">> FULL STACK DEVELOPER | SYSTEM ENGINEER | QUANTITATIVE TRADING SYSTEMS ENGINEER</div>
-            </div>
-
-            <div class="about-text">
-                <p>
-                    Greetings, I'm <strong>Neko-San</strong>. I construct digital bridges across low-level engines, scalable web backends, visual simulations, and automated financial algorithmic strategies.
-                </p>
-                <p>
-                    My experience focuses on combining deep mathematical and physical logic (like DBSCAN geospatial clustering and Three.js Rapier3D physics) with scalable cloud services to solve real-world problems. Whether building full-stack platforms for municipal complaints or analyzing real-time financial indicators, I specialize in designing robust, low-latency code.
-                </p>
-            </div>
-
-            <h2 class="about-section-title">Favorite Compiler Environments</h2>
-            <div class="about-text">
-                <p>
-                    I operate primarily across:
-                </p>
-                <ul>
-                    <li><strong>Backend Systems</strong>: Golang, C++, C#, Python</li>
-                    <li><strong>Frontend & Web</strong>: TypeScript, JavaScript</li>
-                    <li><strong>Mobile Platforms</strong>: Swift (iOS), Kotlin (Android)</li>
-                </ul>
-            </div>
-
-            <h2 class="about-section-title">Diagnostics Specifications</h2>
-            <div class="profile-stats">
-                <div class="stat-item">
-                    <span class="stat-label">OS VERSION</span>
-                    <span class="stat-value">NekoOS v1.4.32</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-label">RUNTIME CAPABILITIES</span>
-                    <span class="stat-value">Active 24/7</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-label">DIFFICULTY LEVEL</span>
-                    <span class="stat-value">Expert</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-label">CURRENT THESIS</span>
-                    <span class="stat-value">D.R.I.M.S. 2.0</span>
-                </div>
-            </div>
+          </div>
+          <div>
+            <h2 style="font-size: 18px; color: var(--neon-magenta);">NEKO-SAN</h2>
+            <div style="font-family: var(--font-pixel); font-size: 8px; color: var(--text-muted);">CLASS: FULL STACK / QUANT DEV</div>
+            <div style="font-family: var(--font-pixel); font-size: 8px; color: var(--neon-cyan);">LEVEL: 24</div>
+          </div>
         </div>
 
-        <!-- Social Contact Footer -->
-        <section class="contact-container">
-            <h3 class="contact-title">Sync Protocol</h3>
-            <div class="contact-links">
-                <a href="mailto:pyrrhuselcidgo@gmail.com" class="contact-link">
-                    <span>✉</span> Email
-                </a>
-                <a href="https://github.com/neko-san1432" target="_blank" class="contact-link">
-                    <span>🐙</span> GitHub
-                </a>
-                <a href="#" class="contact-link">
-                    <span>💬</span> Discord
-                </a>
-                <a href="#" class="contact-link">
-                    <span>🔗</span> LinkedIn
-                </a>
-            </div>
-        </section>
-    </main>
+        <div style="border-top: 2px solid var(--border-color); padding-top: 15px; font-size: 20px;">
+          <p style="margin-bottom: 15px;">
+            "A software engineer focusing on quantitative trading algorithms, high-efficiency system architecture, and 3D physical modeling simulation engines."
+          </p>
+          <div style="margin-top: 20px;">
+            <h3 style="font-size: 12px; color: var(--neon-yellow); margin-bottom: 10px;">CORE_CONNECTIONS:</h3>
+            <ul style="list-style: none; padding-left: 10px; display: flex; flex-direction: column; gap: 10px;">
+              <li><span class="prompt">email:</span> <a href="mailto:pyrrhuselcidgo@gmail.com">pyrrhuselcidgo@gmail.com</a></li>
+              <li><span class="prompt">github:</span> <a href="https://github.com/neko-san1432" target="_blank">github.com/neko-san1432</a></li>
+              <li><span class="prompt">discord:</span> <span style="color: var(--neon-cyan)">neko_san#1432</span></li>
+              <li><span class="prompt">linkedin:</span> <a href="https://linkedin.com" target="_blank">neko-san1432</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
 
-    <script src="app.js"></script>
+      <!-- Languages / Stats (RPG Bar charts) -->
+      <div class="card-retro" style="flex: 1.5; min-width: 300px;">
+        <div class="card-tag">LANGUAGE_MASTERY_TELEMETRY</div>
+        <h2 style="font-size: 16px; margin-bottom: 20px;">FORGED SKILL METRICS</h2>
+
+        <div class="stats-grid">
+          <!-- Go -->
+          <div class="stat-box">
+            <div class="stat-name">GOLANG</div>
+            <div class="stat-bar-outer">
+              <div class="stat-bar-inner" data-width="95%"></div>
+            </div>
+            <div class="stat-val">LVL 95</div>
+          </div>
+          <!-- Python -->
+          <div class="stat-box">
+            <div class="stat-name">PYTHON</div>
+            <div class="stat-bar-outer">
+              <div class="stat-bar-inner" data-width="92%"></div>
+            </div>
+            <div class="stat-val">LVL 92</div>
+          </div>
+          <!-- JS/TS -->
+          <div class="stat-box">
+            <div class="stat-name">JS / TS</div>
+            <div class="stat-bar-outer">
+              <div class="stat-bar-inner" data-width="90%"></div>
+            </div>
+            <div class="stat-val">LVL 90</div>
+          </div>
+          <!-- C++ -->
+          <div class="stat-box">
+            <div class="stat-name">C++</div>
+            <div class="stat-bar-outer">
+              <div class="stat-bar-inner" data-width="85%"></div>
+            </div>
+            <div class="stat-val">LVL 85</div>
+          </div>
+          <!-- C# -->
+          <div class="stat-box">
+            <div class="stat-name">C#</div>
+            <div class="stat-bar-outer">
+              <div class="stat-bar-inner" data-width="80%"></div>
+            </div>
+            <div class="stat-val">LVL 80</div>
+          </div>
+          <!-- Swift -->
+          <div class="stat-box">
+            <div class="stat-name">SWIFT</div>
+            <div class="stat-bar-outer">
+              <div class="stat-bar-inner" data-width="75%"></div>
+            </div>
+            <div class="stat-val">LVL 75</div>
+          </div>
+          <!-- Kotlin -->
+          <div class="stat-box">
+            <div class="stat-name">KOTLIN</div>
+            <div class="stat-bar-outer">
+              <div class="stat-bar-inner" data-width="70%"></div>
+            </div>
+            <div class="stat-val">LVL 70</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p style="font-family: var(--font-pixel); font-size: 10px; color: var(--text-muted);">&copy; 2026 NEKO-SAN. DESIGN FORGED 1:1 WITH RETRO CAT SYSTEMS.</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
 </body>
 </html>

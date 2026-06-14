@@ -1,196 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Neko-San | Projects</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Neko-San // Project Deck Explorer</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="cats.css">
 </head>
-<body>
-    <header>
-        <div class="logo-container">
-            <!-- Left Cat -->
-            <svg class="pixel-cat" viewBox="0 0 16 16" width="40" height="40">
-                <style>
-                    .body-dark { fill: #2a2b36; }
-                    .eye-cyan { fill: #00f0ff; }
-                    .accent-cyan { fill: #00b4d8; }
-                </style>
-                <rect x="2" y="2" width="2" height="3" class="body-dark"/>
-                <rect x="12" y="2" width="2" height="3" class="body-dark"/>
-                <rect x="3" y="4" width="10" height="8" class="body-dark"/>
-                <rect x="2" y="5" width="12" height="6" class="body-dark"/>
-                <rect x="4" y="7" width="2" height="2" class="eye-cyan"/>
-                <rect x="10" y="7" width="2" height="2" class="eye-cyan"/>
-                <rect x="4" y="11" width="8" height="1" class="accent-cyan"/>
-                <rect x="4" y="12" width="8" height="3" class="body-dark"/>
-                <rect x="3" y="14" width="2" height="1" class="body-dark"/>
-                <rect x="11" y="14" width="2" height="1" class="body-dark"/>
-                <rect x="1" y="10" width="1" height="4" class="body-dark"/>
-                <rect x="2" y="9" width="1" height="1" class="body-dark"/>
-            </svg>
+<body class="crt-flicker">
+  <header>
+    <div class="container nav-container">
+      <div class="logo">&lt;NEKO-SAN_SYS&gt;</div>
+      <nav>
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="projects.html" class="active">PROJECTS</a></li>
+          <li><a href="about.html">ABOUT</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-            <span class="logo-text">Neko-San</span>
+  <main class="container">
+    <div style="text-align: center; margin-bottom: 40px;">
+      <h1 class="glitch" data-text="PROJECT DECK" style="font-size: 28px;">PROJECT DECK</h1>
+      <p style="font-family: var(--font-pixel); font-size: 10px; color: var(--neon-magenta);">[SELECT LEVEL MODULE TO AUDIT SPECIFICATIONS]</p>
+    </div>
 
-            <!-- Right Cat -->
-            <svg class="pixel-cat" viewBox="0 0 16 16" width="40" height="40">
-                <style>
-                    .body-pink { fill: #ff2e93; }
-                    .eye-dark { fill: #0f1016; }
-                    .accent-cyan2 { fill: #00f0ff; }
-                </style>
-                <rect x="2" y="2" width="2" height="3" class="body-pink"/>
-                <rect x="12" y="2" width="2" height="3" class="body-pink"/>
-                <rect x="3" y="4" width="10" height="8" class="body-pink"/>
-                <rect x="2" y="5" width="12" height="6" class="body-pink"/>
-                <rect x="4" y="7" width="2" height="2" class="eye-dark"/>
-                <rect x="10" y="7" width="2" height="2" class="eye-dark"/>
-                <rect x="4" y="11" width="8" height="1" class="accent-cyan2"/>
-                <rect x="4" y="12" width="8" height="3" class="body-pink"/>
-                <rect x="3" y="14" width="2" height="1" class="body-pink"/>
-                <rect x="11" y="14" width="2" height="1" class="body-pink"/>
-                <rect x="14" y="10" width="1" height="4" class="body-pink"/>
-                <rect x="13" y="9" width="1" height="1" class="body-pink"/>
-            </svg>
+    <!-- Retro Filter Panel -->
+    <div style="background-color: var(--bg-header); border: 2px solid var(--border-color); padding: 15px; margin-bottom: 30px; display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
+      <button class="btn-retro filter-btn active" data-filter="all">ALL_SYSTEMS</button>
+      <button class="btn-retro filter-btn" data-filter="thesis">THESIS</button>
+      <button class="btn-retro filter-btn" data-filter="simulation">3D_PHYSICS</button>
+      <button class="btn-retro filter-btn" data-filter="quant">QUANT_BOTS</button>
+      <button class="btn-retro filter-btn" data-filter="github">GITHUB_REPOS</button>
+    </div>
+
+    <!-- Project Cards Grid -->
+    <div class="grid-select" id="projects-grid">
+      <!-- D.R.I.M.S. -->
+      <div class="card-retro" data-tags="thesis all">
+        <div class="card-tag">THESIS</div>
+        <h2 style="font-size: 16px; margin-bottom: 10px;">CitizenLink 2.0 (D.R.I.M.S.)</h2>
+        <p style="font-size: 18px; margin-bottom: 15px;">Complaint Management System with DBSCAN-Based Geospatial Heatmaps & Hybrid NLP classification.</p>
+        <span class="card-status active">ACTIVE_SYSTEM</span>
+        <div style="margin-top: 15px;">
+          <button class="btn-retro view-details-btn" data-project="drims">OPEN_SPEC</button>
         </div>
-        <nav>
-            <a href="index.html">~/home</a>
-            <a href="projects.html" class="active">~/projects</a>
-            <a href="about.html">~/about</a>
-        </nav>
-    </header>
+      </div>
 
-    <main>
-        <!-- Search & Filter Controls -->
-        <div class="search-filter-bar">
-            <input type="text" id="project-search" class="search-input" placeholder="Search systems, thesis, games...">
-            <button class="filter-btn active" data-category="all">ALL</button>
-            <button class="filter-btn" data-category="web">WEB</button>
-            <button class="filter-btn" data-category="game">3D/GAME</button>
-            <button class="filter-btn" data-category="trading">TRADING</button>
+      <!-- 3D Color Game Simulator -->
+      <div class="card-retro" data-tags="simulation all">
+        <div class="card-tag">3D PHYSICS</div>
+        <h2 style="font-size: 16px; margin-bottom: 10px;">3D Color Game Simulator</h2>
+        <p style="font-size: 18px; margin-bottom: 15px;">Rapier3D physics-based simulation of the traditional Filipino 'Perya' Color Game, determining cube faces.</p>
+        <span class="card-status active">ACTIVE_SYSTEM</span>
+        <div style="margin-top: 15px;">
+          <button class="btn-retro view-details-btn" data-project="colorgame">OPEN_SPEC</button>
         </div>
+      </div>
 
-        <!-- Projects Grid -->
-        <div class="projects-grid" id="projects-grid-container">
-            <!-- Project 1: CitizenLink -->
-            <div class="project-card" data-category="web">
-                <div class="project-card-header">
-                    <span class="project-card-title">CitizenLink 2.0</span>
-                    <span class="project-tag">Thesis</span>
-                </div>
-                <div class="project-card-body">
-                    <p class="project-card-desc">
-                        A Geospatial Citizen Complaint System built for local government units. Featuring a Hybrid NLP model for automated department routing and DBSCAN analytics engine mapping real-time hot spots.
-                    </p>
-                    <div>
-                        <div class="project-tech-list">
-                            <span class="project-tech-item">NodeJS</span>
-                            <span class="project-tech-item">Supabase</span>
-                            <span class="project-tech-item">LeafletJS</span>
-                            <span class="project-tech-item">Postgres/PostGIS</span>
-                        </div>
-                        <a href="https://github.com/neko-san1432/CitizenLink" target="_blank" class="project-link">
-                            Inspect Repository →
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Project 2: 3D Color Game Simulator -->
-            <div class="project-card" data-category="game">
-                <div class="project-card-header">
-                    <span class="project-card-title">3D Color Game</span>
-                    <span class="project-tag">Simulation</span>
-                </div>
-                <div class="project-card-body">
-                    <p class="project-card-desc">
-                        A physics-based simulation of the traditional Filipino carnival "Perya" Color Game. Renders collision dynamics of rolling cubes and simulates outcomes using 3D vector calculations.
-                    </p>
-                    <div>
-                        <div class="project-tech-list">
-                            <span class="project-tech-item">TypeScript</span>
-                            <span class="project-tech-item">Three.js</span>
-                            <span class="project-tech-item">Rapier3D</span>
-                            <span class="project-tech-item">Vite</span>
-                        </div>
-                        <a href="#" class="project-link">
-                            Launch Simulation →
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Project 3: Predator Bot (EA) -->
-            <div class="project-card" data-category="trading">
-                <div class="project-card-header">
-                    <span class="project-card-title">Predator Bot</span>
-                    <span class="project-tag maintenance">Maintenance</span>
-                </div>
-                <div class="project-card-body">
-                    <p class="project-card-desc">
-                        Expert Advisor trading system implementing scalp bots, adaptive risk engines, trailing safeguards, and volume bridges for high-performance financial market execution.
-                    </p>
-                    <div>
-                        <div class="project-tech-list">
-                            <span class="project-tech-item">MQL5</span>
-                            <span class="project-tech-item">Pine Script</span>
-                            <span class="project-tech-item">Python</span>
-                        </div>
-                        <span class="project-link" style="color: var(--text-muted); cursor: not-allowed;">
-                            🔐 Classified / Offline
-                        </span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Project 4: CritiCart -->
-            <div class="project-card" data-category="web">
-                <div class="project-card-header">
-                    <span class="project-card-title">CritiCart</span>
-                    <span class="project-tag">Web App</span>
-                </div>
-                <div class="project-card-body">
-                    <p class="project-card-desc">
-                        E-commerce review and critique system allowing customers from around the world to analyze, rating, and discuss products linked directly to their originating webshops.
-                    </p>
-                    <div>
-                        <div class="project-tech-list">
-                            <span class="project-tech-item">JavaScript</span>
-                            <span class="project-tech-item">Tailwind</span>
-                            <span class="project-tech-item">API Integrations</span>
-                        </div>
-                        <a href="https://github.com/neko-san1432/CritiCart" target="_blank" class="project-link">
-                            Inspect Repository →
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Project 5: Ettiquetta Japan -->
-            <div class="project-card" data-category="web">
-                <div class="project-card-header">
-                    <span class="project-card-title">Ettiquetta-Japan</span>
-                    <span class="project-tag">Guide</span>
-                </div>
-                <div class="project-card-body">
-                    <p class="project-card-desc">
-                        Interactive web-based guide dedicated to teaching travelers, students, and professionals the essential social rules and etiquettes of Japan.
-                    </p>
-                    <div>
-                        <div class="project-tech-list">
-                            <span class="project-tech-item">HTML5</span>
-                            <span class="project-tech-item">CSS3</span>
-                            <span class="project-tech-item">JavaScript</span>
-                        </div>
-                        <a href="https://github.com/neko-san1432/Ettiquetta-Japan" target="_blank" class="project-link">
-                            Inspect Repository →
-                        </a>
-                    </div>
-                </div>
-            </div>
+      <!-- Predator Bot (EA) -->
+      <div class="card-retro" data-tags="quant all">
+        <div class="card-tag">QUANT</div>
+        <h2 style="font-size: 16px; margin-bottom: 10px;">Predator Bot (EA)</h2>
+        <p style="font-size: 18px; margin-bottom: 15px;">MetaTrader 5 Expert Advisor (EA) and algorithmic trading system equipped with ProfitGuard.</p>
+        <span class="card-status maintenance">MAINTENANCE</span>
+        <div style="margin-top: 15px;">
+          <button class="btn-retro view-details-btn" data-project="predator">OPEN_SPEC</button>
         </div>
-    </main>
+      </div>
 
-    <script src="app.js"></script>
+      <!-- CritiCart -->
+      <div class="card-retro" data-tags="github all">
+        <div class="card-tag">GITHUB</div>
+        <h2 style="font-size: 16px; margin-bottom: 10px;">CritiCart</h2>
+        <p style="font-size: 18px; margin-bottom: 15px;">Global feedback application letting web users critique and rate products based on origin shop links.</p>
+        <span class="card-status active">ACTIVE_SYSTEM</span>
+        <div style="margin-top: 15px;">
+          <button class="btn-retro view-details-btn" data-project="criticart">OPEN_SPEC</button>
+        </div>
+      </div>
+
+      <!-- Ettiquetta-Japan -->
+      <div class="card-retro" data-tags="github all">
+        <div class="card-tag">GITHUB</div>
+        <h2 style="font-size: 16px; margin-bottom: 10px;">Ettiquetta-Japan</h2>
+        <p style="font-size: 18px; margin-bottom: 15px;">A beautifully crafted interactive web guide for Japanese cultural etiquette and travel guidance.</p>
+        <span class="card-status active">ACTIVE_SYSTEM</span>
+        <div style="margin-top: 15px;">
+          <button class="btn-retro view-details-btn" data-project="ettiquetta">OPEN_SPEC</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Spec Modal Overlay -->
+  <div class="modal-overlay" id="spec-modal">
+    <div class="modal-content">
+      <div class="modal-close" id="modal-close-btn">[X] CLOSE</div>
+      <h2 id="modal-title" style="margin-bottom: 15px; font-size: 20px;">PROJECT_NAME</h2>
+      <div id="modal-body" class="terminal-body">
+        <!-- Inside modal template content will be loaded dynamically via Javascript -->
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;">
+      <p style="font-family: var(--font-pixel); font-size: 10px; color: var(--text-muted);">&copy; 2026 NEKO-SAN. DESIGN FORGED 1:1.</p>
+      
+      <!-- Tiny 1:1 Animated Cat on footer of projects page -->
+      <div style="width: 48px; height: 48px;">
+        <svg viewBox="0 0 16 16" shape-rendering="crispEdges">
+          <g class="tail-left">
+            <rect x="1" y="11" width="1" height="2" fill="#1f2335" />
+            <rect x="0" y="9" width="1" height="2" fill="#1f2335" />
+            <rect x="1" y="8" width="1" height="1" fill="#1f2335" />
+          </g>
+          <rect x="2" y="1" width="1" height="2" fill="#1f2335" />
+          <rect x="3" y="2" width="1" height="2" fill="#ff007f" />
+          <rect x="4" y="2" width="1" height="2" fill="#1f2335" />
+          <rect x="12" y="1" width="1" height="2" fill="#1f2335" />
+          <rect x="11" y="2" width="1" height="2" fill="#ff007f" />
+          <rect x="10" y="2" width="1" height="2" fill="#1f2335" />
+          <rect x="3" y="4" width="9" height="1" fill="#1f2335" />
+          <rect x="2" y="5" width="11" height="3" fill="#1f2335" />
+          <rect x="4" y="6" width="1" height="1" fill="#00f0ff" />
+          <rect x="10" y="6" width="1" height="1" fill="#00f0ff" />
+          <rect x="7" y="7" width="1" height="1" fill="#ff007f" />
+          <rect x="3" y="8" width="9" height="6" fill="#1f2335" />
+          <rect x="4" y="14" width="2" height="1" fill="#00f0ff" />
+          <rect x="9" y="14" width="2" height="1" fill="#00f0ff" />
+        </svg>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
 </body>
 </html>

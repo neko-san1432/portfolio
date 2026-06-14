@@ -1,0 +1,47 @@
+/* cats.css */
+
+/* Continuous idle animations */
+@keyframes idle-tail-wag {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(15deg); }
+}
+
+@keyframes idle-breath {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-2px); }
+}
+
+@keyframes cat-wobble-anim {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(1deg); }
+}
+
+.cat-wobble {
+  animation: cat-wobble-anim 2s steps(2) infinite;
+  transform-origin: bottom center;
+}
+
+.cat-breath {
+  animation: idle-breath 3s steps(4) infinite;
+}
+
+.tail-left {
+  transform-origin: 2px 11px;
+  animation: idle-tail-wag 1.6s steps(4) infinite;
+}
+
+.tail-right {
+  transform-origin: 13px 11px;
+  animation: idle-tail-wag 1.4s steps(4) infinite;
+}
+
+/* Container setups for embedding */
+.cat-svg-embed {
+  width: 96px;
+  height: 96px;
+  display: inline-block;
+}
+
+.left-cat-container, .right-cat-container {
+  display: inline-block;
+}

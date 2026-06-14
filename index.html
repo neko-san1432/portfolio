@@ -1,261 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Neko-San | Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Neko-San // Retro-Futuristic Developer Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="cats.css">
 </head>
-<body>
-    <header>
-        <div class="logo-container">
-            <!-- Left Cat (Dark) -->
-            <svg class="pixel-cat" viewBox="0 0 16 16" width="40" height="40">
-                <style>
-                    .body-dark { fill: #2a2b36; }
-                    .eye-cyan { fill: #00f0ff; }
-                    .accent-cyan { fill: #00b4d8; }
-                </style>
-                <!-- Ears -->
-                <rect x="2" y="2" width="2" height="3" class="body-dark"/>
-                <rect x="12" y="2" width="2" height="3" class="body-dark"/>
-                <!-- Head -->
-                <rect x="3" y="4" width="10" height="8" class="body-dark"/>
-                <rect x="2" y="5" width="12" height="6" class="body-dark"/>
-                <!-- Eyes -->
-                <rect x="4" y="7" width="2" height="2" class="eye-cyan"/>
-                <rect x="10" y="7" width="2" height="2" class="eye-cyan"/>
-                <!-- Collar -->
-                <rect x="4" y="11" width="8" height="1" class="accent-cyan"/>
-                <!-- Body/Feet -->
-                <rect x="4" y="12" width="8" height="3" class="body-dark"/>
-                <rect x="3" y="14" width="2" height="1" class="body-dark"/>
-                <rect x="11" y="14" width="2" height="1" class="body-dark"/>
-                <!-- Tail -->
-                <rect x="1" y="10" width="1" height="4" class="body-dark"/>
-                <rect x="2" y="9" width="1" height="1" class="body-dark"/>
-            </svg>
+<body class="crt-flicker">
+  <header>
+    <div class="container nav-container">
+      <div class="logo">&lt;NEKO-SAN_SYS&gt;</div>
+      <nav>
+        <ul>
+          <li><a href="index.html" class="active">HOME</a></li>
+          <li><a href="projects.html">PROJECTS</a></li>
+          <li><a href="about.html">ABOUT</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-            <span class="logo-text">Neko-San</span>
-
-            <!-- Right Cat (Pink) -->
-            <svg class="pixel-cat" viewBox="0 0 16 16" width="40" height="40">
-                <style>
-                    .body-pink { fill: #ff2e93; }
-                    .eye-dark { fill: #0f1016; }
-                    .accent-cyan2 { fill: #00f0ff; }
-                </style>
-                <!-- Ears -->
-                <rect x="2" y="2" width="2" height="3" class="body-pink"/>
-                <rect x="12" y="2" width="2" height="3" class="body-pink"/>
-                <!-- Head -->
-                <rect x="3" y="4" width="10" height="8" class="body-pink"/>
-                <rect x="2" y="5" width="12" height="6" class="body-pink"/>
-                <!-- Eyes -->
-                <rect x="4" y="7" width="2" height="2" class="eye-dark"/>
-                <rect x="10" y="7" width="2" height="2" class="eye-dark"/>
-                <!-- Collar -->
-                <rect x="4" y="11" width="8" height="1" class="accent-cyan2"/>
-                <!-- Body/Feet -->
-                <rect x="4" y="12" width="8" height="3" class="body-pink"/>
-                <rect x="3" y="14" width="2" height="1" class="body-pink"/>
-                <rect x="11" y="14" width="2" height="1" class="body-pink"/>
-                <!-- Tail/Wiggle -->
-                <rect x="14" y="10" width="1" height="4" class="body-pink"/>
-                <rect x="13" y="9" width="1" height="1" class="body-pink"/>
-            </svg>
+  <main class="container">
+    <!-- Hero / Name Section with Twin Cyber-Cats -->
+    <div class="banner-container">
+      <div class="left-cat-container cat-wobble">
+        <div class="cat-breath">
+          <svg class="cat-svg-embed" viewBox="0 0 16 16" shape-rendering="crispEdges">
+            <g class="tail-left">
+              <rect x="1" y="11" width="1" height="2" fill="#1f2335" />
+              <rect x="0" y="9" width="1" height="2" fill="#1f2335" />
+              <rect x="1" y="8" width="1" height="1" fill="#1f2335" />
+            </g>
+            <rect x="2" y="1" width="1" height="2" fill="#1f2335" />
+            <rect x="3" y="2" width="1" height="2" fill="#ff007f" />
+            <rect x="4" y="2" width="1" height="2" fill="#1f2335" />
+            <rect x="12" y="1" width="1" height="2" fill="#1f2335" />
+            <rect x="11" y="2" width="1" height="2" fill="#ff007f" />
+            <rect x="10" y="2" width="1" height="2" fill="#1f2335" />
+            <rect x="3" y="4" width="9" height="1" fill="#1f2335" />
+            <rect x="2" y="5" width="11" height="3" fill="#1f2335" />
+            <rect x="4" y="6" width="1" height="1" fill="#00f0ff">
+              <animate attributeName="height" values="1;1;0.1;1;1" dur="4s" repeatCount="indefinite" keyTimes="0;0.9;0.93;0.96;1" />
+              <animate attributeName="y" values="6;6;6.45;6;6" dur="4s" repeatCount="indefinite" keyTimes="0;0.9;0.93;0.96;1" />
+            </rect>
+            <rect x="10" y="6" width="1" height="1" fill="#00f0ff">
+              <animate attributeName="height" values="1;1;0.1;1;1" dur="4s" repeatCount="indefinite" keyTimes="0;0.9;0.93;0.96;1" />
+              <animate attributeName="y" values="6;6;6.45;6;6" dur="4s" repeatCount="indefinite" keyTimes="0;0.9;0.93;0.96;1" />
+            </rect>
+            <rect x="3" y="7" width="1" height="1" fill="#7aa2f7" />
+            <rect x="11" y="7" width="1" height="1" fill="#7aa2f7" />
+            <rect x="7" y="7" width="1" height="1" fill="#ff007f" />
+            <rect x="3" y="8" width="9" height="6" fill="#1f2335" />
+            <rect x="4" y="14" width="2" height="1" fill="#00f0ff" />
+            <rect x="9" y="14" width="2" height="1" fill="#00f0ff" />
+          </svg>
         </div>
-        <nav>
-            <a href="index.html" class="active">~/home</a>
-            <a href="projects.html">~/projects</a>
-            <a href="about.html">~/about</a>
-        </nav>
-    </header>
+      </div>
 
-    <main>
-        <!-- Mock Terminal -->
-        <section class="terminal">
-            <div class="terminal-header">
-                <div class="terminal-buttons">
-                    <span class="terminal-btn pink"></span>
-                    <span class="terminal-btn yellow"></span>
-                    <span class="terminal-btn green"></span>
-                </div>
-                <div class="terminal-title">neko-san@system: ~</div>
-            </div>
-            <div class="terminal-body" id="terminal-content">
-                <div class="terminal-line"><span class="terminal-prompt">neko-san:~$</span> neofetch</div>
-                <div class="neofetch-container">
-                    <pre class="neofetch-art">
- /\_/\
-(='v'=)
-(")_(")~
-                    </pre>
-                    <div class="neofetch-info">
-                        <div class="neofetch-row"><span>OS:</span><span>NekoOS v1.4.32</span></div>
-                        <div class="neofetch-row"><span>KERNEL:</span><span>TypeScript / Go / C++</span></div>
-                        <div class="neofetch-row"><span>UPTIME:</span><span>Active 24/7 (Actions)</span></div>
-                        <div class="neofetch-row"><span>LAST SYNC:</span><span id="sync-time">Jun 14, 2026 22:04 UTC</span></div>
-                    </div>
-                </div>
-                
-                <div class="terminal-line" style="margin-top: 20px;"><span class="terminal-prompt">neko-san:~$</span> github-contribution</div>
-                <div class="contrib-grid-container">
-                    <div class="contrib-header">Contributions (Last 4 weeks):</div>
-                    <div class="contrib-weeks" id="contribution-graph">
-                        <!-- Javascript will dynamically inject rows with random colors matching green/cyan/purple levels -->
-                    </div>
-                    <div class="contrib-summary">
-                        Status: <span class="status">Active</span> | Total Commits: <span class="count">2,432</span> this season.
-                    </div>
-                </div>
-                <div class="terminal-line" style="margin-top: 20px;"><span class="terminal-prompt">neko-san:~$</span> <span class="cursor">_</span></div>
-            </div>
-        </section>
+      <div style="text-align: center; margin: 0 30px;">
+        <h1 class="glitch" data-text="NEKO-SAN" style="font-size: 32px; letter-spacing: 2px;">NEKO-SAN</h1>
+        <p style="font-family: var(--font-pixel); font-size: 10px; color: var(--neon-magenta); margin-top: -10px;">[SYS_ADMIN & QUANT_ENG]</p>
+      </div>
 
-        <!-- Tech Stack Section -->
-        <section class="tech-stack-container">
-            <h2 class="tech-stack-title">Tech Stack</h2>
-            <div class="tech-grid">
-                <!-- Java -->
-                <div class="tech-card">
-                    <svg viewBox="0 0 16 16">
-                        <rect x="6" y="2" width="4" height="2" fill="#ff79c6"/>
-                        <rect x="5" y="4" width="6" height="5" fill="#f8f8f2"/>
-                        <rect x="4" y="6" width="8" height="1" fill="#8be9fd"/>
-                        <rect x="3" y="9" width="10" height="2" fill="#ff79c6"/>
-                        <rect x="5" y="11" width="6" height="1" fill="#f1fa8c"/>
-                    </svg>
-                    <span class="tech-name">Java</span>
-                    <span class="tech-desc">System</span>
-                </div>
-                <!-- Python -->
-                <div class="tech-card">
-                    <svg viewBox="0 0 16 16">
-                        <rect x="4" y="3" width="5" height="4" fill="#38bdf8"/>
-                        <rect x="7" y="7" width="5" height="4" fill="#facc15"/>
-                        <rect x="3" y="6" width="3" height="3" fill="#38bdf8"/>
-                        <rect x="10" y="5" width="3" height="3" fill="#facc15"/>
-                    </svg>
-                    <span class="tech-name">Python</span>
-                    <span class="tech-desc">Scripting</span>
-                </div>
-                <!-- Javascript -->
-                <div class="tech-card">
-                    <svg viewBox="0 0 16 16">
-                        <rect x="2" y="2" width="12" height="12" fill="#facc15"/>
-                        <rect x="7" y="6" width="2" height="2" fill="#0f1016"/>
-                        <rect x="9" y="8" width="1" height="4" fill="#0f1016"/>
-                        <rect x="6" y="10" width="3" height="2" fill="#0f1016"/>
-                    </svg>
-                    <span class="tech-name">JS</span>
-                    <span class="tech-desc">Web App</span>
-                </div>
-                <!-- Typescript -->
-                <div class="tech-card">
-                    <svg viewBox="0 0 16 16">
-                        <rect x="2" y="2" width="12" height="12" fill="#38bdf8"/>
-                        <rect x="4" y="4" width="8" height="2" fill="#0f1016"/>
-                        <rect x="8" y="6" width="2" height="6" fill="#0f1016"/>
-                    </svg>
-                    <span class="tech-name">TS</span>
-                    <span class="tech-desc">Frontend</span>
-                </div>
-                <!-- Kotlin -->
-                <div class="tech-card">
-                    <svg viewBox="0 0 16 16">
-                        <polygon points="2,2 8,2 2,8" fill="#a855f7"/>
-                        <polygon points="8,2 14,2 2,14" fill="#ec4899"/>
-                        <polygon points="2,14 14,14 14,2" fill="#e11d48"/>
-                    </svg>
-                    <span class="tech-name">Kotlin</span>
-                    <span class="tech-desc">Android</span>
-                </div>
-                <!-- C -->
-                <div class="tech-card">
-                    <svg viewBox="0 0 16 16">
-                        <rect x="4" y="3" width="8" height="2" fill="#f43f5e"/>
-                        <rect x="3" y="5" width="2" height="6" fill="#f43f5e"/>
-                        <rect x="4" y="11" width="8" height="2" fill="#f43f5e"/>
-                    </svg>
-                    <span class="tech-name">C</span>
-                    <span class="tech-desc">Low Level</span>
-                </div>
-                <!-- C++ -->
-                <div class="tech-card">
-                    <svg viewBox="0 0 16 16">
-                        <rect x="3" y="3" width="6" height="2" fill="#3b82f6"/>
-                        <rect x="2" y="5" width="2" height="6" fill="#3b82f6"/>
-                        <rect x="3" y="11" width="6" height="2" fill="#3b82f6"/>
-                        <!-- Plus signs for ++ -->
-                        <rect x="10" y="5" width="3" height="1" fill="#60a5fa"/>
-                        <rect x="11" y="4" width="1" height="3" fill="#60a5fa"/>
-                        <rect x="10" y="9" width="3" height="1" fill="#60a5fa"/>
-                        <rect x="11" y="8" width="1" height="3" fill="#60a5fa"/>
-                    </svg>
-                    <span class="tech-name">C++</span>
-                    <span class="tech-desc">Graphics</span>
-                </div>
-                <!-- C# -->
-                <div class="tech-card">
-                    <svg viewBox="0 0 16 16">
-                        <rect x="3" y="3" width="6" height="2" fill="#a855f7"/>
-                        <rect x="2" y="5" width="2" height="6" fill="#a855f7"/>
-                        <rect x="3" y="11" width="6" height="2" fill="#a855f7"/>
-                        <!-- Hash symbol -->
-                        <rect x="10" y="4" width="1" height="8" fill="#c084fc"/>
-                        <rect x="12" y="4" width="1" height="8" fill="#c084fc"/>
-                        <rect x="9" y="6" width="5" height="1" fill="#c084fc"/>
-                        <rect x="9" y="9" width="5" height="1" fill="#c084fc"/>
-                    </svg>
-                    <span class="tech-name">C#</span>
-                    <span class="tech-desc">Engines</span>
-                </div>
-                <!-- Swift -->
-                <div class="tech-card">
-                    <svg viewBox="0 0 16 16">
-                        <path d="M2,14 C6,12 10,8 14,2 C12,6 8,10 2,14" stroke="#f97316" stroke-width="3" fill="none" stroke-linecap="round"/>
-                        <path d="M5,13 C8,11 11,8 14,4 C11,7 8,9 5,13" stroke="#ffedd5" stroke-width="1.5" fill="none" stroke-linecap="round"/>
-                    </svg>
-                    <span class="tech-name">Swift</span>
-                    <span class="tech-desc">iOS / OSx</span>
-                </div>
-                <!-- Golang -->
-                <div class="tech-card">
-                    <svg viewBox="0 0 16 16">
-                        <rect x="4" y="3" width="8" height="8" fill="#00add8" rx="2"/>
-                        <rect x="5" y="5" width="2" height="2" fill="#ffffff"/>
-                        <rect x="9" y="5" width="2" height="2" fill="#ffffff"/>
-                        <rect x="5" y="6" width="1" height="1" fill="#000000"/>
-                        <rect x="9" y="6" width="1" height="1" fill="#000000"/>
-                        <rect x="7" y="11" width="2" height="3" fill="#fbd38d"/>
-                    </svg>
-                    <span class="tech-name">Go</span>
-                    <span class="tech-desc">Backend</span>
-                </div>
-            </div>
-        </section>
+      <div class="right-cat-container cat-wobble" style="animation-delay: 0.15s;">
+        <div class="cat-breath" style="animation-delay: 0.4s;">
+          <svg class="cat-svg-embed" viewBox="0 0 16 16" shape-rendering="crispEdges">
+            <g class="tail-right">
+              <rect x="13" y="11" width="1" height="2" fill="#ff007f" />
+              <rect x="14" y="9" width="1" height="2" fill="#ff007f" />
+              <rect x="13" y="8" width="1" height="1" fill="#ff007f" />
+            </g>
+            <rect x="2" y="1" width="1" height="2" fill="#ff007f" />
+            <rect x="3" y="2" width="1" height="2" fill="#00f0ff" />
+            <rect x="4" y="2" width="1" height="2" fill="#ff007f" />
+            <rect x="12" y="1" width="1" height="2" fill="#ff007f" />
+            <rect x="11" y="2" width="1" height="2" fill="#00f0ff" />
+            <rect x="10" y="2" width="1" height="2" fill="#ff007f" />
+            <rect x="3" y="4" width="5" height="1" fill="#ff007f" />
+            <rect x="8" y="4" width="3" height="1" fill="#00f0ff" />
+            <rect x="2" y="5" width="6" height="1" fill="#ff007f" />
+            <rect x="8" y="5" width="4" height="1" fill="#00f0ff" />
+            <rect x="12" y="5" width="1" height="1" fill="#ff007f" />
+            <rect x="2" y="6" width="11" height="1" fill="#ff007f" />
+            <rect x="4" y="6" width="1" height="1" fill="#00f0ff">
+              <animate attributeName="height" values="1;1;0.1;1;1" dur="4s" repeatCount="indefinite" keyTimes="0;0.9;0.93;0.96;1" />
+              <animate attributeName="y" values="6;6;6.45;6;6" dur="4s" repeatCount="indefinite" keyTimes="0;0.9;0.93;0.96;1" />
+            </rect>
+            <rect x="10" y="6" width="1" height="1" fill="#00f0ff">
+              <animate attributeName="height" values="1;1;0.1;1;1" dur="4s" repeatCount="indefinite" keyTimes="0;0.9;0.93;0.96;1" />
+              <animate attributeName="y" values="6;6;6.45;6;6" dur="4s" repeatCount="indefinite" keyTimes="0;0.9;0.93;0.96;1" />
+            </rect>
+            <rect x="3" y="7" width="1" height="1" fill="#fafafa" />
+            <rect x="11" y="7" width="1" height="1" fill="#fafafa" />
+            <rect x="7" y="7" width="1" height="1" fill="#00f0ff" />
+            <rect x="3" y="8" width="9" height="1" fill="#ff007f" />
+            <rect x="3" y="9" width="2" height="1" fill="#1f2335" />
+            <rect x="5" y="9" width="7" height="1" fill="#ff007f" />
+            <rect x="3" y="10" width="3" height="1" fill="#1f2335" />
+            <rect x="6" y="10" width="6" height="1" fill="#ff007f" />
+            <rect x="3" y="11" width="9" height="3" fill="#ff007f" />
+            <rect x="4" y="14" width="2" height="1" fill="#fafafa" />
+            <rect x="9" y="14" width="2" height="1" fill="#fafafa" />
+          </svg>
+        </div>
+      </div>
+    </div>
 
-        <!-- Social Contact Footer -->
-        <section class="contact-container">
-            <h3 class="contact-title">Sync Protocol</h3>
-            <div class="contact-links">
-                <a href="mailto:pyrrhuselcidgo@gmail.com" class="contact-link">
-                    <span>✉</span> Email
-                </a>
-                <a href="https://github.com/neko-san1432" target="_blank" class="contact-link">
-                    <span>🐙</span> GitHub
-                </a>
-                <a href="#" class="contact-link">
-                    <span>💬</span> Discord
-                </a>
-                <a href="#" class="contact-link">
-                    <span>🔗</span> LinkedIn
-                </a>
-            </div>
-        </section>
-    </main>
+    <!-- Retro Terminal Interface -->
+    <div class="terminal">
+      <div class="terminal-header-bar">
+        <div class="terminal-dot td-red"></div>
+        <div class="terminal-dot td-yellow"></div>
+        <div class="terminal-dot td-green"></div>
+        <div class="terminal-title">neko-san@system: ~</div>
+      </div>
+      <div class="terminal-body" id="terminal-body">
+        <div class="terminal-line"><span class="prompt">neko-san:~$</span> <span class="command">neofetch</span></div>
+        <div style="display: flex; gap: 20px; flex-wrap: wrap; margin-bottom: 15px;">
+          <!-- Inline ASCII Art of blinking cat -->
+          <pre style="color: var(--neon-cyan); font-weight: bold; font-size: 14px; line-height: 1.2;">
+   /\_/\  
+  (='v'=) 
+  (")_(")~
+          </pre>
+          <div>
+            <div style="color: var(--neon-cyan); font-weight: bold;">OS: <span style="color: var(--text-primary); font-weight: normal;">NekoOS v1.4.32</span></div>
+            <div style="color: var(--neon-cyan); font-weight: bold;">USER: <span style="color: var(--text-primary); font-weight: normal;">neko-san1432</span></div>
+            <div style="color: var(--neon-cyan); font-weight: bold;">ROLES: <span style="color: var(--text-primary); font-weight: normal;">Full Stack Dev // Sys Engineer // Quant Eng</span></div>
+            <div style="color: var(--neon-cyan); font-weight: bold;">STATUS: <span style="color: var(--neon-green); font-weight: bold;">ONLINE / READY</span></div>
+          </div>
+        </div>
+        
+        <div class="terminal-line"><span class="prompt">neko-san:~$</span> <span class="command">diagnostics --all</span></div>
+        <div style="margin-bottom: 15px;">
+          <div>&gt; Loading database configurations... <span style="color: var(--neon-green)">[OK]</span></div>
+          <div>&gt; Deploying neural networks... <span style="color: var(--neon-green)">[OK]</span></div>
+          <div>&gt; Active modules found: 3</div>
+          <div style="padding-left: 15px; color: var(--neon-yellow);">
+            - CITIZENLINK 2.0 (D.R.I.M.S.) [THESIS] [HYBRID NLP / DBSCAN HEATMAP]<br>
+            - 3D COLOR GAME SIMULATOR [THREEJS / RAPIER3D / PERYA]<br>
+            - PREDATOR BOT EA [QUANT ENG] <span style="color: var(--neon-magenta)">[UNDER MAINTENANCE]</span>
+          </div>
+        </div>
+        
+        <div class="terminal-line"><span class="prompt">neko-san:~$</span> <span class="command">cat readme.txt</span></div>
+        <div style="margin-bottom: 15px;">
+          "Welcome to my retro-cyber terminal deck. I construct high-reliability full-stack applications, physical mechanics simulators, and quantitative trading systems. Select target modules from the directory panel to audit code and view specifications."
+        </div>
 
-    <script src="app.js"></script>
+        <div class="terminal-line"><span class="prompt">neko-san:~$</span> <span class="cursor"></span></div>
+      </div>
+    </div>
+
+    <!-- Quick Action / Level Select -->
+    <div style="text-align: center; margin-top: 40px;">
+      <a href="projects.html" class="btn-retro" style="padding: 15px 30px;">ENTER EXPLORER</a>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p style="font-family: var(--font-pixel); font-size: 10px; color: var(--text-muted);">&copy; 2026 NEKO-SAN. DESIGN FORGED 1:1 WITH RETRO CAT SYSTEMS.</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
 </body>
 </html>
