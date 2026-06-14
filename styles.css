@@ -112,10 +112,44 @@ a:hover {
 
 /* Layout elements */
 .container {
-  max-width: 1000px;
+  max-width: 1300px;
   margin: 0 auto;
   padding: 20px;
 }
+
+/* Avatar Styles */
+.pixel-avatar {
+  width: 120px;
+  height: 120px;
+  image-rendering: pixelated;
+  border: 4px solid var(--neon-cyan);
+  box-shadow: 0 0 12px var(--neon-cyan), 0 4px 0 var(--bg-darker);
+  object-fit: cover;
+  background-color: var(--bg-darker);
+}
+
+.avatar-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 120px;
+  border: 4px dashed var(--neon-magenta);
+  color: var(--neon-magenta);
+  font-family: var(--font-pixel);
+  font-size: 8px;
+  text-align: center;
+  padding: 10px;
+  background-color: var(--bg-darker);
+  box-shadow: 0 4px 0 var(--bg-darker);
+  text-transform: uppercase;
+}
+.avatar-placeholder:hover {
+  border-color: var(--neon-cyan);
+  color: var(--neon-cyan);
+  box-shadow: 0 0 12px var(--neon-cyan), 0 4px 0 var(--bg-darker);
+}
+
 
 /* Header & Navigation */
 header {
@@ -477,5 +511,6 @@ footer {
 /* Pixel Cat Cursor override */
 html, button, a, .modal-close {
   /* Dynamic custom cursor will fall back to pointer if not loaded */
-  cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' shape-rendering='crispEdges'><rect x='5' y='2' width='1' height='2' fill='%23ff007f'/><rect x='10' y='2' width='1' height='2' fill='%23ff007f'/><rect x='6' y='4' width='4' height='6' fill='%231f2335'/><rect x='7' y='6' width='1' height='1' fill='%2300f0ff'/><rect x='9' y='6' width='1' height='1' fill='%2300f0ff'/><rect x='8' y='7' width='1' height='1' fill='%23ff007f'/><rect x='5' y='10' width='6' height='4' fill='%231f2335'/><rect x='6' y='14' width='1' height='1' fill='%2300f0ff'/><rect x='9' y='14' width='1' height='1' fill='%2300f0ff'/></svg>"), auto;
+  cursor: url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' shape-rendering='crispEdges'%3E%3Crect x='5' y='2' width='1' height='2' fill='%23ff007f'/%3E%3Crect x='10' y='2' width='1' height='2' fill='%23ff007f'/%3E%3Crect x='6' y='4' width='4' height='6' fill='%231f2335'/%3E%3Crect x='7' y='6' width='1' height='1' fill='%2300f0ff'/%3E%3Crect x='9' y='6' width='1' height='1' fill='%2300f0ff'/%3E%3Crect x='8' y='7' width='1' height='1' fill='%23ff007f'/%3E%3Crect x='5' y='10' width='6' height='4' fill='%231f2335'/%3E%3Crect x='6' y='14' width='1' height='1' fill='%2300f0ff'/%3E%3Crect x='9' y='14' width='1' height='1' fill='%2300f0ff'/%3E%3C/svg%3E"), auto;
 }
+

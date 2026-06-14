@@ -117,9 +117,9 @@
       </div>
       <div class="terminal-body" id="terminal-body">
         <div class="terminal-line"><span class="prompt">neko-san:~$</span> <span class="command">neofetch</span></div>
-        <div style="display: flex; gap: 20px; flex-wrap: wrap; margin-bottom: 15px;">
+        <div style="display: flex; gap: 40px; flex-wrap: wrap; margin-bottom: 15px; align-items: center;">
           <!-- Inline ASCII Art of blinking cat -->
-          <pre style="color: var(--neon-cyan); font-weight: bold; font-size: 14px; line-height: 1.2;">
+          <pre style="color: var(--neon-cyan); font-weight: bold; font-size: 14px; line-height: 1.2; margin: 0;">
    /\_/\  
   (='v'=) 
   (")_(")~
@@ -130,7 +130,16 @@
             <div style="color: var(--neon-cyan); font-weight: bold;">ROLES: <span style="color: var(--text-primary); font-weight: normal;">Full Stack Dev // Sys Engineer // Quant Eng</span></div>
             <div style="color: var(--neon-cyan); font-weight: bold;">STATUS: <span style="color: var(--neon-green); font-weight: bold;">ONLINE / READY</span></div>
           </div>
+          <!-- Face Slot -->
+          <div style="margin-left: auto;">
+            <!-- If face.png exists, show it. Otherwise, show fallback placeholder. -->
+            <img src="face.png" alt="[FACE]" class="pixel-avatar" onerror="this.style.display='none'; document.getElementById('face-placeholder-index').style.display='flex';">
+            <div id="face-placeholder-index" class="avatar-placeholder" style="display: none;">
+              [ ADD FACE.PNG ]
+            </div>
+          </div>
         </div>
+
         
         <div class="terminal-line"><span class="prompt">neko-san:~$</span> <span class="command">diagnostics --all</span></div>
         <div style="margin-bottom: 15px;">
