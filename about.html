@@ -1,312 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>neko-san1432 // PROFILE DOSSIER</title>
-  <meta name="description" content="Technical background and skills dossier of neko-san1432.">
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neko-San | About</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <header>
+        <div class="logo-container">
+            <!-- Left Cat -->
+            <svg class="pixel-cat" viewBox="0 0 16 16" width="40" height="40">
+                <style>
+                    .body-dark { fill: #2a2b36; }
+                    .eye-cyan { fill: #00f0ff; }
+                    .accent-cyan { fill: #00b4d8; }
+                </style>
+                <rect x="2" y="2" width="2" height="3" class="body-dark"/>
+                <rect x="12" y="2" width="2" height="3" class="body-dark"/>
+                <rect x="3" y="4" width="10" height="8" class="body-dark"/>
+                <rect x="2" y="5" width="12" height="6" class="body-dark"/>
+                <rect x="4" y="7" width="2" height="2" class="eye-cyan"/>
+                <rect x="10" y="7" width="2" height="2" class="eye-cyan"/>
+                <rect x="4" y="11" width="8" height="1" class="accent-cyan"/>
+                <rect x="4" y="12" width="8" height="3" class="body-dark"/>
+                <rect x="3" y="14" width="2" height="1" class="body-dark"/>
+                <rect x="11" y="14" width="2" height="1" class="body-dark"/>
+                <rect x="1" y="10" width="1" height="4" class="body-dark"/>
+                <rect x="2" y="9" width="1" height="1" class="body-dark"/>
+            </svg>
 
-  <!-- Cyber HUD Header -->
-  <header class="hud-header">
-    <div class="logo-container">
-      <a href="index.html" class="hud-logo">NEKO_SYS_v2.0</a>
-    </div>
-    <nav class="hud-nav">
-      <a href="index.html" class="nav-link">CONSOLE</a>
-      <a href="projects.html" class="nav-link">ARCHIVES</a>
-      <a href="about.html" class="nav-link active">DOSSIER</a>
-    </nav>
-    <div class="system-status">
-      <span class="status-dot"></span>
-      <span>SECURE_LINK [CONNECTED]</span>
-    </div>
-  </header>
+            <span class="logo-text">Neko-San</span>
 
-  <!-- Pixel Title Header -->
-  <div class="pixel-banner">
-    <!-- Pixel Cat Left -->
-    <svg class="pixel-cat" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" style="image-rendering: pixelated;">
-      <rect x="2" y="2" width="2" height="2" fill="#ff0055" />
-      <rect x="12" y="2" width="2" height="2" fill="#ff0055" />
-      <rect x="2" y="4" width="12" height="10" fill="#1e293b" />
-      <rect x="4" y="2" width="8" height="2" fill="#1e293b" />
-      <rect x="4" y="6" width="2" height="2" fill="#00f0ff" />
-      <rect x="10" y="6" width="2" height="2" fill="#00f0ff" />
-      <rect x="7" y="9" width="2" height="1" fill="#ff0055" />
-    </svg>
-    <h1 class="pixel-title">NEKO-SAN</h1>
-    <!-- Pixel Cat Right -->
-    <svg class="pixel-cat" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" style="image-rendering: pixelated;">
-      <rect x="2" y="2" width="2" height="2" fill="#ff0055" />
-      <rect x="12" y="2" width="2" height="2" fill="#ff0055" />
-      <rect x="2" y="4" width="12" height="10" fill="#bd00ff" />
-      <rect x="4" y="2" width="8" height="2" fill="#bd00ff" />
-      <rect x="4" y="6" width="2" height="2" fill="#00f0ff" />
-      <rect x="10" y="6" width="2" height="2" fill="#00f0ff" />
-      <rect x="7" y="9" width="2" height="1" fill="#ff0055" />
-    </svg>
-  </div>
-
-  <!-- Main Container -->
-  <main class="main-container" style="max-width: 1000px; margin-top: 0;">
-    
-    <!-- macOS style Terminal window -->
-    <div class="terminal-window">
-      <div class="terminal-titlebar">
-        <div class="window-dots">
-          <span class="window-dot red"></span>
-          <span class="window-dot yellow"></span>
-          <span class="window-dot green"></span>
+            <!-- Right Cat -->
+            <svg class="pixel-cat" viewBox="0 0 16 16" width="40" height="40">
+                <style>
+                    .body-pink { fill: #ff2e93; }
+                    .eye-dark { fill: #0f1016; }
+                    .accent-cyan2 { fill: #00f0ff; }
+                </style>
+                <rect x="2" y="2" width="2" height="3" class="body-pink"/>
+                <rect x="12" y="2" width="2" height="3" class="body-pink"/>
+                <rect x="3" y="4" width="10" height="8" class="body-pink"/>
+                <rect x="2" y="5" width="12" height="6" class="body-pink"/>
+                <rect x="4" y="7" width="2" height="2" class="eye-dark"/>
+                <rect x="10" y="7" width="2" height="2" class="eye-dark"/>
+                <rect x="4" y="11" width="8" height="1" class="accent-cyan2"/>
+                <rect x="4" y="12" width="8" height="3" class="body-pink"/>
+                <rect x="3" y="14" width="2" height="1" class="body-pink"/>
+                <rect x="11" y="14" width="2" height="1" class="body-pink"/>
+                <rect x="14" y="10" width="1" height="4" class="body-pink"/>
+                <rect x="13" y="9" width="1" height="1" class="body-pink"/>
+            </svg>
         </div>
-        <div class="window-title">neko-san@system: ~</div>
-      </div>
-      <div class="terminal-body">
-        
-        <div class="prompt-line">neko-san:~$ <span>neofetch</span></div>
-        
-        <div class="neofetch-container">
-          <!-- ASCII Art Cat -->
-          <div class="ascii-cat">
- /\_/\
-(='v'=)
-(")_(")~
-          </div>
-          <!-- Neofetch details -->
-          <div class="neofetch-info">
-            <div><span class="info-label">OS:</span> <span class="info-value">NekoOS v1.4.32</span></div>
-            <div><span class="info-label">KERNEL:</span> <span class="info-value">TypeScript / Node.js</span></div>
-            <div><span class="info-label">UPTIME:</span> <span class="info-value">Active 24/7 (Actions)</span></div>
-            <div><span class="info-label">LAST SYNC:</span> <span class="info-value">Jun 14, 2026 21:56 UTC</span></div>
-          </div>
-        </div>
+        <nav>
+            <a href="index.html">~/home</a>
+            <a href="projects.html">~/projects</a>
+            <a href="about.html" class="active">~/about</a>
+        </nav>
+    </header>
 
-        <div class="prompt-line" style="margin-top: 2rem;">neko-san:~$ <span>github-contribution</span></div>
-        
-        <!-- Retro GitHub Contributions Grid -->
-        <div class="contributions-container">
-          <div class="contrib-header">CONTRIBUTIONS (LAST 4 WEEKS):</div>
-          <div class="contrib-rows">
-            <div class="contrib-row">
-              <span>Mon</span>
-              <div class="contrib-cells">
-                <span class="contrib-cell lvl-1"></span>
-                <span class="contrib-cell lvl-3"></span>
-                <span class="contrib-cell lvl-1"></span>
-                <span class="contrib-cell lvl-5"></span>
-                <span class="contrib-cell lvl-2"></span>
-                <span class="contrib-cell lvl-5"></span>
-                <span class="contrib-cell lvl-3"></span>
-                <span class="contrib-cell lvl-1"></span>
-                <span class="contrib-cell"></span>
-                <span class="contrib-cell lvl-4"></span>
-                <span class="contrib-cell lvl-2"></span>
-                <span class="contrib-cell lvl-5"></span>
-                <span class="contrib-cell lvl-1"></span>
-                <span class="contrib-cell lvl-4"></span>
-              </div>
+    <main>
+        <div class="about-container">
+            <div class="about-header">
+                <h1 class="about-title">Systems diagnostics</h1>
+                <div class="about-subtitle">> FULL STACK DEVELOPER | SYSTEM ENGINEER | QUANTITATIVE TRADING SYSTEMS ENGINEER</div>
             </div>
-            <div class="contrib-row">
-              <span>Wed</span>
-              <div class="contrib-cells">
-                <span class="contrib-cell lvl-4"></span>
-                <span class="contrib-cell lvl-1"></span>
-                <span class="contrib-cell lvl-4"></span>
-                <span class="contrib-cell lvl-1"></span>
-                <span class="contrib-cell lvl-3"></span>
-                <span class="contrib-cell lvl-1"></span>
-                <span class="contrib-cell lvl-5"></span>
-                <span class="contrib-cell lvl-4"></span>
-                <span class="contrib-cell lvl-4"></span>
-                <span class="contrib-cell lvl-1"></span>
-                <span class="contrib-cell"></span>
-                <span class="contrib-cell lvl-3"></span>
-                <span class="contrib-cell lvl-4"></span>
-                <span class="contrib-cell lvl-5"></span>
-              </div>
+
+            <div class="about-text">
+                <p>
+                    Greetings, I'm <strong>Neko-San</strong>. I construct digital bridges across low-level engines, scalable web backends, visual simulations, and automated financial algorithmic strategies.
+                </p>
+                <p>
+                    My experience focuses on combining deep mathematical and physical logic (like DBSCAN geospatial clustering and Three.js Rapier3D physics) with scalable cloud services to solve real-world problems. Whether building full-stack platforms for municipal complaints or analyzing real-time financial indicators, I specialize in designing robust, low-latency code.
+                </p>
             </div>
-            <div class="contrib-row">
-              <span>Fri</span>
-              <div class="contrib-cells">
-                <span class="contrib-cell lvl-1"></span>
-                <span class="contrib-cell lvl-4"></span>
-                <span class="contrib-cell lvl-2"></span>
-                <span class="contrib-cell lvl-5"></span>
-                <span class="contrib-cell lvl-1"></span>
-                <span class="contrib-cell lvl-4"></span>
-                <span class="contrib-cell lvl-2"></span>
-                <span class="contrib-cell lvl-4"></span>
-                <span class="contrib-cell lvl-1"></span>
-                <span class="contrib-cell lvl-4"></span>
-                <span class="contrib-cell lvl-5"></span>
-                <span class="contrib-cell lvl-2"></span>
-                <span class="contrib-cell lvl-4"></span>
-                <span class="contrib-cell lvl-1"></span>
-              </div>
+
+            <h2 class="about-section-title">Favorite Compiler Environments</h2>
+            <div class="about-text">
+                <p>
+                    I operate primarily across:
+                </p>
+                <ul>
+                    <li><strong>Backend Systems</strong>: Golang, C++, C#, Python</li>
+                    <li><strong>Frontend & Web</strong>: TypeScript, JavaScript</li>
+                    <li><strong>Mobile Platforms</strong>: Swift (iOS), Kotlin (Android)</li>
+                </ul>
             </div>
-          </div>
-          <div style="margin-top: 1.5rem;" class="terminal-desc">
-            Status: <span class="status-active">Active</span> | Total Commits: <span class="commit-highlight">2,432</span> this season.
-          </div>
+
+            <h2 class="about-section-title">Diagnostics Specifications</h2>
+            <div class="profile-stats">
+                <div class="stat-item">
+                    <span class="stat-label">OS VERSION</span>
+                    <span class="stat-value">NekoOS v1.4.32</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">RUNTIME CAPABILITIES</span>
+                    <span class="stat-value">Active 24/7</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">DIFFICULTY LEVEL</span>
+                    <span class="stat-value">Expert</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">CURRENT THESIS</span>
+                    <span class="stat-value">D.R.I.M.S. 2.0</span>
+                </div>
+            </div>
         </div>
 
-        <div class="prompt-line">neko-san:~$ <span class="cursor">_</span></div>
+        <!-- Social Contact Footer -->
+        <section class="contact-container">
+            <h3 class="contact-title">Sync Protocol</h3>
+            <div class="contact-links">
+                <a href="mailto:pyrrhuselcidgo@gmail.com" class="contact-link">
+                    <span>✉</span> Email
+                </a>
+                <a href="https://github.com/neko-san1432" target="_blank" class="contact-link">
+                    <span>🐙</span> GitHub
+                </a>
+                <a href="#" class="contact-link">
+                    <span>💬</span> Discord
+                </a>
+                <a href="#" class="contact-link">
+                    <span>🔗</span> LinkedIn
+                </a>
+            </div>
+        </section>
+    </main>
 
-      </div>
-    </div>
-
-    <!-- Blacksmith's Arsenal title -->
-    <h2 class="skills-arsenal-title">BLACKSMITH'S ARSENAL</h2>
-
-    <!-- Language Grid with Pixel Art Icons -->
-    <div class="skills-arsenal-grid">
-      
-      <!-- Java -->
-      <div class="skill-arsenal-card">
-        <svg class="skill-icon-svg" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" style="image-rendering: pixelated;">
-          <rect x="5" y="1" width="1" height="3" fill="#ff0055"/>
-          <rect x="7" y="0" width="1" height="3" fill="#ff0055"/>
-          <rect x="9" y="1" width="1" height="3" fill="#ff0055"/>
-          <rect x="3" y="5" width="8" height="6" fill="#f43f5e" />
-          <rect x="11" y="6" width="2" height="4" fill="#f43f5e" />
-          <rect x="12" y="7" width="1" height="2" fill="#f43f5e" />
-          <rect x="2" y="11" width="11" height="2" fill="#fff" />
-        </svg>
-        <div class="skill-name">JAVA</div>
-        <div class="skill-sub">SYSTEMS</div>
-      </div>
-
-      <!-- Python -->
-      <div class="skill-arsenal-card">
-        <svg class="skill-icon-svg" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" style="image-rendering: pixelated;">
-          <rect x="3" y="2" width="6" height="5" fill="#38bdf8" />
-          <rect x="7" y="9" width="6" height="5" fill="#eab308" />
-          <rect x="5" y="7" width="6" height="2" fill="#eab308" />
-          <rect x="4" y="3" width="1" height="1" fill="#fff" />
-          <rect x="11" y="12" width="1" height="1" fill="#fff" />
-        </svg>
-        <div class="skill-name">PYTHON</div>
-        <div class="skill-sub">SCRIPTING</div>
-      </div>
-
-      <!-- JS -->
-      <div class="skill-arsenal-card">
-        <svg class="skill-icon-svg" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" style="image-rendering: pixelated;">
-          <rect x="1" y="1" width="14" height="14" fill="#facc15" />
-          <rect x="4" y="10" width="4" height="1" fill="#000" />
-          <rect x="7" y="7" width="1" height="3" fill="#000" />
-          <rect x="10" y="7" width="3" height="1" fill="#000" />
-          <rect x="10" y="8" width="1" height="2" fill="#000" />
-          <rect x="10" y="10" width="3" height="1" fill="#000" />
-          <rect x="12" y="9" width="1" height="1" fill="#000" />
-        </svg>
-        <div class="skill-name">JS</div>
-        <div class="skill-sub">WEB APP</div>
-      </div>
-
-      <!-- TS -->
-      <div class="skill-arsenal-card">
-        <svg class="skill-icon-svg" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" style="image-rendering: pixelated;">
-          <rect x="1" y="1" width="14" height="14" fill="#38bdf8" />
-          <rect x="3" y="6" width="5" height="1" fill="#fff" />
-          <rect x="5" y="7" width="1" height="4" fill="#fff" />
-          <rect x="9" y="6" width="4" height="1" fill="#fff" />
-          <rect x="9" y="7" width="1" height="2" fill="#fff" />
-          <rect x="9" y="9" width="4" height="1" fill="#fff" />
-          <rect x="12" y="10" width="1" height="1" fill="#fff" />
-          <rect x="9" y="11" width="4" height="1" fill="#fff" />
-        </svg>
-        <div class="skill-name">TS</div>
-        <div class="skill-sub">FRONTEND</div>
-      </div>
-
-      <!-- Kotlin -->
-      <div class="skill-arsenal-card">
-        <svg class="skill-icon-svg" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" style="image-rendering: pixelated;">
-          <path d="M1 15V1H15L1 15Z" fill="#a855f7" />
-          <path d="M15 15H1L15 1V15Z" fill="#ec4899" />
-          <rect x="5" y="5" width="6" height="6" fill="#f43f5e" />
-        </svg>
-        <div class="skill-name">KOTLIN</div>
-        <div class="skill-sub">ANDROID</div>
-      </div>
-
-      <!-- C -->
-      <div class="skill-arsenal-card">
-        <svg class="skill-icon-svg" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" style="image-rendering: pixelated;">
-          <rect x="1" y="1" width="14" height="14" fill="#f43f5e" />
-          <rect x="4" y="4" width="8" height="2" fill="#fff" />
-          <rect x="4" y="6" width="2" height="4" fill="#fff" />
-          <rect x="4" y="10" width="8" height="2" fill="#fff" />
-        </svg>
-        <div class="skill-name">C</div>
-        <div class="skill-sub">LOW LEVEL</div>
-      </div>
-
-      <!-- C++ -->
-      <div class="skill-arsenal-card">
-        <svg class="skill-icon-svg" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" style="image-rendering: pixelated;">
-          <rect x="1" y="1" width="14" height="14" fill="#0284c7" />
-          <rect x="3" y="4" width="6" height="2" fill="#fff" />
-          <rect x="3" y="6" width="2" height="4" fill="#fff" />
-          <rect x="3" y="10" width="6" height="2" fill="#fff" />
-          <rect x="10" y="7" width="4" height="1" fill="#fff" />
-          <rect x="11" y="6" width="2" height="3" fill="#fff" />
-        </svg>
-        <div class="skill-name">C++</div>
-        <div class="skill-sub">GRAPHICS</div>
-      </div>
-
-      <!-- C# -->
-      <div class="skill-arsenal-card">
-        <svg class="skill-icon-svg" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" style="image-rendering: pixelated;">
-          <rect x="1" y="1" width="14" height="14" fill="#7c3aed" />
-          <rect x="3" y="4" width="6" height="2" fill="#fff" />
-          <rect x="3" y="6" width="2" height="4" fill="#fff" />
-          <rect x="3" y="10" width="6" height="2" fill="#fff" />
-          <rect x="10" y="5" width="1" height="6" fill="#fff" />
-          <rect x="12" y="5" width="1" height="6" fill="#fff" />
-          <rect x="9" y="7" width="5" height="1" fill="#fff" />
-          <rect x="9" y="9" width="5" height="1" fill="#fff" />
-        </svg>
-        <div class="skill-name">C#</div>
-        <div class="skill-sub">ENGINES</div>
-      </div>
-
-      <!-- Swift -->
-      <div class="skill-arsenal-card">
-        <svg class="skill-icon-svg" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" style="image-rendering: pixelated;">
-          <rect x="1" y="1" width="14" height="14" fill="#ea580c" />
-          <path d="M13 13C10 13 4 8 2 3C6 7 11 11 13 13Z" fill="#fff" />
-          <path d="M13 13C12 11 9 7 6 5C9 7 11 11 13 13Z" fill="#fff" />
-        </svg>
-        <div class="skill-name">SWIFT</div>
-        <div class="skill-sub">IOS / OSX</div>
-      </div>
-
-      <!-- Golang -->
-      <div class="skill-arsenal-card">
-        <svg class="skill-icon-svg" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" style="image-rendering: pixelated;">
-          <rect x="1" y="1" width="14" height="14" fill="#06b6d4" />
-          <rect x="4" y="4" width="2" height="2" fill="#000" />
-          <rect x="10" y="4" width="2" height="2" fill="#000" />
-          <rect x="5" y="8" width="6" height="2" fill="#fff" />
-          <rect x="6" y="9" width="4" height="2" fill="#fff" />
-        </svg>
-        <div class="skill-name">GOLANG</div>
-        <div class="skill-sub">BACKEND</div>
-      </div>
-
-    </div>
-
-  </main>
-
-  <footer class="hud-footer">
-    <div class="hud-footer-status">> DOSSIER RETRIEVAL: RENDERED OK</div>
-    <div>&copy; 2026 neko-san1432. Dedicated to those worthy to be shown.</div>
-  </footer>
-
+    <script src="app.js"></script>
 </body>
 </html>

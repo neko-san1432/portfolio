@@ -1,127 +1,196 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>neko-san1432 // ARCHIVE DATABASE</title>
-  <meta name="description" content="Operational project repository query console for neko-san1432.">
-  <link rel="stylesheet" href="styles.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neko-San | Projects</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <header>
+        <div class="logo-container">
+            <!-- Left Cat -->
+            <svg class="pixel-cat" viewBox="0 0 16 16" width="40" height="40">
+                <style>
+                    .body-dark { fill: #2a2b36; }
+                    .eye-cyan { fill: #00f0ff; }
+                    .accent-cyan { fill: #00b4d8; }
+                </style>
+                <rect x="2" y="2" width="2" height="3" class="body-dark"/>
+                <rect x="12" y="2" width="2" height="3" class="body-dark"/>
+                <rect x="3" y="4" width="10" height="8" class="body-dark"/>
+                <rect x="2" y="5" width="12" height="6" class="body-dark"/>
+                <rect x="4" y="7" width="2" height="2" class="eye-cyan"/>
+                <rect x="10" y="7" width="2" height="2" class="eye-cyan"/>
+                <rect x="4" y="11" width="8" height="1" class="accent-cyan"/>
+                <rect x="4" y="12" width="8" height="3" class="body-dark"/>
+                <rect x="3" y="14" width="2" height="1" class="body-dark"/>
+                <rect x="11" y="14" width="2" height="1" class="body-dark"/>
+                <rect x="1" y="10" width="1" height="4" class="body-dark"/>
+                <rect x="2" y="9" width="1" height="1" class="body-dark"/>
+            </svg>
 
-  <!-- Cyber HUD Header -->
-  <header class="hud-header">
-    <div class="logo-container">
-      <a href="index.html" class="hud-logo">NEKO_SYS_v2.0</a>
-    </div>
-    <nav class="hud-nav">
-      <a href="index.html" class="nav-link">CONSOLE</a>
-      <a href="projects.html" class="nav-link active">ARCHIVES</a>
-      <a href="about.html" class="nav-link">DOSSIER</a>
-    </nav>
-    <div class="system-status">
-      <span class="status-dot"></span>
-      <span>SECURE_LINK [CONNECTED]</span>
-    </div>
-  </header>
+            <span class="logo-text">Neko-San</span>
 
-  <!-- Pixel Title Header -->
-  <div class="pixel-banner">
-    <!-- Pixel Cat Left -->
-    <svg class="pixel-cat" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" style="image-rendering: pixelated;">
-      <rect x="2" y="2" width="2" height="2" fill="#ff0055" />
-      <rect x="12" y="2" width="2" height="2" fill="#ff0055" />
-      <rect x="2" y="4" width="12" height="10" fill="#1e293b" />
-      <rect x="4" y="2" width="8" height="2" fill="#1e293b" />
-      <rect x="4" y="6" width="2" height="2" fill="#00f0ff" />
-      <rect x="10" y="6" width="2" height="2" fill="#00f0ff" />
-      <rect x="7" y="9" width="2" height="1" fill="#ff0055" />
-    </svg>
-    <h1 class="pixel-title">NEKO-SAN</h1>
-    <!-- Pixel Cat Right -->
-    <svg class="pixel-cat" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" style="image-rendering: pixelated;">
-      <rect x="2" y="2" width="2" height="2" fill="#ff0055" />
-      <rect x="12" y="2" width="2" height="2" fill="#ff0055" />
-      <rect x="2" y="4" width="12" height="10" fill="#bd00ff" />
-      <rect x="4" y="2" width="8" height="2" fill="#bd00ff" />
-      <rect x="4" y="6" width="2" height="2" fill="#00f0ff" />
-      <rect x="10" y="6" width="2" height="2" fill="#00f0ff" />
-      <rect x="7" y="9" width="2" height="1" fill="#ff0055" />
-    </svg>
-  </div>
-
-  <!-- Main Grid Layout -->
-  <main class="main-container" style="max-width: 1000px; margin-top: 0;">
-    
-    <!-- macOS style Terminal window explorer -->
-    <div class="terminal-window">
-      <div class="terminal-titlebar">
-        <div class="window-dots">
-          <span class="window-dot red"></span>
-          <span class="window-dot yellow"></span>
-          <span class="window-dot green"></span>
+            <!-- Right Cat -->
+            <svg class="pixel-cat" viewBox="0 0 16 16" width="40" height="40">
+                <style>
+                    .body-pink { fill: #ff2e93; }
+                    .eye-dark { fill: #0f1016; }
+                    .accent-cyan2 { fill: #00f0ff; }
+                </style>
+                <rect x="2" y="2" width="2" height="3" class="body-pink"/>
+                <rect x="12" y="2" width="2" height="3" class="body-pink"/>
+                <rect x="3" y="4" width="10" height="8" class="body-pink"/>
+                <rect x="2" y="5" width="12" height="6" class="body-pink"/>
+                <rect x="4" y="7" width="2" height="2" class="eye-dark"/>
+                <rect x="10" y="7" width="2" height="2" class="eye-dark"/>
+                <rect x="4" y="11" width="8" height="1" class="accent-cyan2"/>
+                <rect x="4" y="12" width="8" height="3" class="body-pink"/>
+                <rect x="3" y="14" width="2" height="1" class="body-pink"/>
+                <rect x="11" y="14" width="2" height="1" class="body-pink"/>
+                <rect x="14" y="10" width="1" height="4" class="body-pink"/>
+                <rect x="13" y="9" width="1" height="1" class="body-pink"/>
+            </svg>
         </div>
-        <div class="window-title">neko-san@explorer: ~</div>
-      </div>
-      
-      <div class="terminal-body">
-        <div class="prompt-line">neko-san:~$ <span>query archives --filter=active</span></div>
-        <div class="terminal-desc">
-          > DB EXPORTER INITIALIZED.<br>
-          > Use input prompt to search files and repositories. Select system categories using filtering buttons below.
-        </div>
-        
-        <!-- Query Filter Bar -->
-        <div class="filter-bar" style="margin: 1.5rem 0;">
-          <input type="text" id="project-search" class="search-input" placeholder="RUN QUERY (Search title, tag, or tech stack...)">
-          
-          <div class="filter-btn-group">
-            <button class="filter-btn active" data-filter="all">ALL_RECORDS</button>
-            <button class="filter-btn" data-filter="local">LOCAL_ONLY</button>
-            <button class="filter-btn" data-filter="github">GITHUB_ONLY</button>
-            <button class="filter-btn" data-filter="systems">SYSTEMS_ENG</button>
-          </div>
+        <nav>
+            <a href="index.html">~/home</a>
+            <a href="projects.html" class="active">~/projects</a>
+            <a href="about.html">~/about</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Search & Filter Controls -->
+        <div class="search-filter-bar">
+            <input type="text" id="project-search" class="search-input" placeholder="Search systems, thesis, games...">
+            <button class="filter-btn active" data-category="all">ALL</button>
+            <button class="filter-btn" data-category="web">WEB</button>
+            <button class="filter-btn" data-category="game">3D/GAME</button>
+            <button class="filter-btn" data-category="trading">TRADING</button>
         </div>
 
-        <div class="prompt-line">neko-san:~$ <span>show filtered-results</span></div>
-        
-        <!-- Dynamic Cards Output -->
-        <div class="skills-arsenal-grid" id="projects-container" style="margin-top: 1.5rem;">
-          <!-- Generated Dynamically by app.js -->
+        <!-- Projects Grid -->
+        <div class="projects-grid" id="projects-grid-container">
+            <!-- Project 1: CitizenLink -->
+            <div class="project-card" data-category="web">
+                <div class="project-card-header">
+                    <span class="project-card-title">CitizenLink 2.0</span>
+                    <span class="project-tag">Thesis</span>
+                </div>
+                <div class="project-card-body">
+                    <p class="project-card-desc">
+                        A Geospatial Citizen Complaint System built for local government units. Featuring a Hybrid NLP model for automated department routing and DBSCAN analytics engine mapping real-time hot spots.
+                    </p>
+                    <div>
+                        <div class="project-tech-list">
+                            <span class="project-tech-item">NodeJS</span>
+                            <span class="project-tech-item">Supabase</span>
+                            <span class="project-tech-item">LeafletJS</span>
+                            <span class="project-tech-item">Postgres/PostGIS</span>
+                        </div>
+                        <a href="https://github.com/neko-san1432/CitizenLink" target="_blank" class="project-link">
+                            Inspect Repository →
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2: 3D Color Game Simulator -->
+            <div class="project-card" data-category="game">
+                <div class="project-card-header">
+                    <span class="project-card-title">3D Color Game</span>
+                    <span class="project-tag">Simulation</span>
+                </div>
+                <div class="project-card-body">
+                    <p class="project-card-desc">
+                        A physics-based simulation of the traditional Filipino carnival "Perya" Color Game. Renders collision dynamics of rolling cubes and simulates outcomes using 3D vector calculations.
+                    </p>
+                    <div>
+                        <div class="project-tech-list">
+                            <span class="project-tech-item">TypeScript</span>
+                            <span class="project-tech-item">Three.js</span>
+                            <span class="project-tech-item">Rapier3D</span>
+                            <span class="project-tech-item">Vite</span>
+                        </div>
+                        <a href="#" class="project-link">
+                            Launch Simulation →
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 3: Predator Bot (EA) -->
+            <div class="project-card" data-category="trading">
+                <div class="project-card-header">
+                    <span class="project-card-title">Predator Bot</span>
+                    <span class="project-tag maintenance">Maintenance</span>
+                </div>
+                <div class="project-card-body">
+                    <p class="project-card-desc">
+                        Expert Advisor trading system implementing scalp bots, adaptive risk engines, trailing safeguards, and volume bridges for high-performance financial market execution.
+                    </p>
+                    <div>
+                        <div class="project-tech-list">
+                            <span class="project-tech-item">MQL5</span>
+                            <span class="project-tech-item">Pine Script</span>
+                            <span class="project-tech-item">Python</span>
+                        </div>
+                        <span class="project-link" style="color: var(--text-muted); cursor: not-allowed;">
+                            🔐 Classified / Offline
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 4: CritiCart -->
+            <div class="project-card" data-category="web">
+                <div class="project-card-header">
+                    <span class="project-card-title">CritiCart</span>
+                    <span class="project-tag">Web App</span>
+                </div>
+                <div class="project-card-body">
+                    <p class="project-card-desc">
+                        E-commerce review and critique system allowing customers from around the world to analyze, rating, and discuss products linked directly to their originating webshops.
+                    </p>
+                    <div>
+                        <div class="project-tech-list">
+                            <span class="project-tech-item">JavaScript</span>
+                            <span class="project-tech-item">Tailwind</span>
+                            <span class="project-tech-item">API Integrations</span>
+                        </div>
+                        <a href="https://github.com/neko-san1432/CritiCart" target="_blank" class="project-link">
+                            Inspect Repository →
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 5: Ettiquetta Japan -->
+            <div class="project-card" data-category="web">
+                <div class="project-card-header">
+                    <span class="project-card-title">Ettiquetta-Japan</span>
+                    <span class="project-tag">Guide</span>
+                </div>
+                <div class="project-card-body">
+                    <p class="project-card-desc">
+                        Interactive web-based guide dedicated to teaching travelers, students, and professionals the essential social rules and etiquettes of Japan.
+                    </p>
+                    <div>
+                        <div class="project-tech-list">
+                            <span class="project-tech-item">HTML5</span>
+                            <span class="project-tech-item">CSS3</span>
+                            <span class="project-tech-item">JavaScript</span>
+                        </div>
+                        <a href="https://github.com/neko-san1432/Ettiquetta-Japan" target="_blank" class="project-link">
+                            Inspect Repository →
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
-        
-      </div>
-    </div>
+    </main>
 
-  </main>
-
-  <!-- Interactive Project Details Modal -->
-  <div class="modal-overlay" id="project-modal">
-    <div class="modal-content">
-      <button class="modal-close" id="modal-close-btn">X</button>
-      <div class="modal-body">
-        <h2 class="modal-title" id="modal-title-el">Project Title</h2>
-        <div class="modal-subtitle" id="modal-subtitle-el">Project Subtitle</div>
-        <div id="modal-desc-el"></div>
-        <div class="modal-section">
-          <div class="modal-section-title">CORE INTEGRATIONS</div>
-          <div class="skills-grid" id="modal-tech-el"></div>
-        </div>
-        <div class="modal-links">
-          <a href="#" target="_blank" class="modal-btn" id="modal-github-link">
-            <span>ACCESS FILES</span> [→]
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <footer class="hud-footer">
-    <div class="hud-footer-status">> ARCHIVE DATABASE QUERY STATUS: LOADED</div>
-    <div>&copy; 2026 neko-san1432. Dedicated to those worthy to be shown.</div>
-  </footer>
-
-  <script src="app.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>

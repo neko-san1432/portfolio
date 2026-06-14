@@ -1,168 +1,261 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>neko-san1432 // CONSOLE CONSOLE</title>
-  <meta name="description" content="Futuristic multi-page retro developer portfolio showcasing thesis and quantitative systems.">
-  <link rel="stylesheet" href="styles.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neko-San | Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <header>
+        <div class="logo-container">
+            <!-- Left Cat (Dark) -->
+            <svg class="pixel-cat" viewBox="0 0 16 16" width="40" height="40">
+                <style>
+                    .body-dark { fill: #2a2b36; }
+                    .eye-cyan { fill: #00f0ff; }
+                    .accent-cyan { fill: #00b4d8; }
+                </style>
+                <!-- Ears -->
+                <rect x="2" y="2" width="2" height="3" class="body-dark"/>
+                <rect x="12" y="2" width="2" height="3" class="body-dark"/>
+                <!-- Head -->
+                <rect x="3" y="4" width="10" height="8" class="body-dark"/>
+                <rect x="2" y="5" width="12" height="6" class="body-dark"/>
+                <!-- Eyes -->
+                <rect x="4" y="7" width="2" height="2" class="eye-cyan"/>
+                <rect x="10" y="7" width="2" height="2" class="eye-cyan"/>
+                <!-- Collar -->
+                <rect x="4" y="11" width="8" height="1" class="accent-cyan"/>
+                <!-- Body/Feet -->
+                <rect x="4" y="12" width="8" height="3" class="body-dark"/>
+                <rect x="3" y="14" width="2" height="1" class="body-dark"/>
+                <rect x="11" y="14" width="2" height="1" class="body-dark"/>
+                <!-- Tail -->
+                <rect x="1" y="10" width="1" height="4" class="body-dark"/>
+                <rect x="2" y="9" width="1" height="1" class="body-dark"/>
+            </svg>
 
-  <!-- Cyber HUD Header -->
-  <header class="hud-header">
-    <div class="logo-container">
-      <a href="index.html" class="hud-logo">NEKO_SYS_v2.0</a>
-    </div>
-    <nav class="hud-nav">
-      <a href="index.html" class="nav-link active">CONSOLE</a>
-      <a href="projects.html" class="nav-link">ARCHIVES</a>
-      <a href="about.html" class="nav-link">DOSSIER</a>
-    </nav>
-    <div class="system-status">
-      <span class="status-dot"></span>
-      <span>SECURE_LINK [CONNECTED]</span>
-    </div>
-  </header>
+            <span class="logo-text">Neko-San</span>
 
-  <!-- Pixel Title Header -->
-  <div class="pixel-banner">
-    <!-- Pixel Cat Left -->
-    <svg class="pixel-cat" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" style="image-rendering: pixelated;">
-      <rect x="2" y="2" width="2" height="2" fill="#ff0055" />
-      <rect x="12" y="2" width="2" height="2" fill="#ff0055" />
-      <rect x="2" y="4" width="12" height="10" fill="#1e293b" />
-      <rect x="4" y="2" width="8" height="2" fill="#1e293b" />
-      <rect x="4" y="6" width="2" height="2" fill="#00f0ff" />
-      <rect x="10" y="6" width="2" height="2" fill="#00f0ff" />
-      <rect x="7" y="9" width="2" height="1" fill="#ff0055" />
-    </svg>
-    <h1 class="pixel-title">NEKO-SAN</h1>
-    <!-- Pixel Cat Right -->
-    <svg class="pixel-cat" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" style="image-rendering: pixelated;">
-      <rect x="2" y="2" width="2" height="2" fill="#ff0055" />
-      <rect x="12" y="2" width="2" height="2" fill="#ff0055" />
-      <rect x="2" y="4" width="12" height="10" fill="#bd00ff" />
-      <rect x="4" y="2" width="8" height="2" fill="#bd00ff" />
-      <rect x="4" y="6" width="2" height="2" fill="#00f0ff" />
-      <rect x="10" y="6" width="2" height="2" fill="#00f0ff" />
-      <rect x="7" y="9" width="2" height="1" fill="#ff0055" />
-    </svg>
-  </div>
-
-  <!-- Main HUD Workspace -->
-  <main class="main-container">
-    
-    <!-- macOS style Terminal window containing 3D Pixel Projector -->
-    <div class="terminal-window">
-      <div class="terminal-titlebar">
-        <div class="window-dots">
-          <span class="window-dot red"></span>
-          <span class="window-dot yellow"></span>
-          <span class="window-dot green"></span>
+            <!-- Right Cat (Pink) -->
+            <svg class="pixel-cat" viewBox="0 0 16 16" width="40" height="40">
+                <style>
+                    .body-pink { fill: #ff2e93; }
+                    .eye-dark { fill: #0f1016; }
+                    .accent-cyan2 { fill: #00f0ff; }
+                </style>
+                <!-- Ears -->
+                <rect x="2" y="2" width="2" height="3" class="body-pink"/>
+                <rect x="12" y="2" width="2" height="3" class="body-pink"/>
+                <!-- Head -->
+                <rect x="3" y="4" width="10" height="8" class="body-pink"/>
+                <rect x="2" y="5" width="12" height="6" class="body-pink"/>
+                <!-- Eyes -->
+                <rect x="4" y="7" width="2" height="2" class="eye-dark"/>
+                <rect x="10" y="7" width="2" height="2" class="eye-dark"/>
+                <!-- Collar -->
+                <rect x="4" y="11" width="8" height="1" class="accent-cyan2"/>
+                <!-- Body/Feet -->
+                <rect x="4" y="12" width="8" height="3" class="body-pink"/>
+                <rect x="3" y="14" width="2" height="1" class="body-pink"/>
+                <rect x="11" y="14" width="2" height="1" class="body-pink"/>
+                <!-- Tail/Wiggle -->
+                <rect x="14" y="10" width="1" height="4" class="body-pink"/>
+                <rect x="13" y="9" width="1" height="1" class="body-pink"/>
+            </svg>
         </div>
-        <div class="window-title">neko-san@projector: ~</div>
-      </div>
-      
-      <!-- Three.js low-res display -->
-      <div class="hologram-viewport-container" id="hologram-viewport">
-        <div class="hologram-hud-overlay">
-          <div class="hologram-label">
-            <span>PROJECTOR STATE: ACTIVE</span>
-            <span>PIXEL_GRID_v4.5</span>
-          </div>
-          <div class="hologram-telemetry">
-            <div>SCANNING_FREQ: <span id="hud-scan-value">245.50 MHz</span></div>
-            <div>ROTATION_VEC: <span id="hud-rot-value">Y: 0.00 RAD</span></div>
-            <div>STATUS: <span id="hud-signal-value">99.8% SECURE</span></div>
-          </div>
-        </div>
-      </div>
+        <nav>
+            <a href="index.html" class="active">~/home</a>
+            <a href="projects.html">~/projects</a>
+            <a href="about.html">~/about</a>
+        </nav>
+    </header>
 
-      <div class="terminal-body">
-        <div class="prompt-line">neko-san:~$ <span>run telemetry-summary</span></div>
-        <div class="terminal-desc">
-          > IDENTITY VERIFIED: neko-san1432<br>
-          > ROLES: Full Stack Developer // System Engineer // Quantitative Trading Systems Engineer<br>
-          > OPERATIONS: Volatility trade engines, client-side Web3D simulations, and geospatial analytics.
-        </div>
-        <div class="prompt-line">neko-san:~$ <span class="cursor">_</span></div>
-      </div>
-    </div>
+    <main>
+        <!-- Mock Terminal -->
+        <section class="terminal">
+            <div class="terminal-header">
+                <div class="terminal-buttons">
+                    <span class="terminal-btn pink"></span>
+                    <span class="terminal-btn yellow"></span>
+                    <span class="terminal-btn green"></span>
+                </div>
+                <div class="terminal-title">neko-san@system: ~</div>
+            </div>
+            <div class="terminal-body" id="terminal-content">
+                <div class="terminal-line"><span class="terminal-prompt">neko-san:~$</span> neofetch</div>
+                <div class="neofetch-container">
+                    <pre class="neofetch-art">
+ /\_/\
+(='v'=)
+(")_(")~
+                    </pre>
+                    <div class="neofetch-info">
+                        <div class="neofetch-row"><span>OS:</span><span>NekoOS v1.4.32</span></div>
+                        <div class="neofetch-row"><span>KERNEL:</span><span>TypeScript / Go / C++</span></div>
+                        <div class="neofetch-row"><span>UPTIME:</span><span>Active 24/7 (Actions)</span></div>
+                        <div class="neofetch-row"><span>LAST SYNC:</span><span id="sync-time">Jun 14, 2026 22:04 UTC</span></div>
+                    </div>
+                </div>
+                
+                <div class="terminal-line" style="margin-top: 20px;"><span class="terminal-prompt">neko-san:~$</span> github-contribution</div>
+                <div class="contrib-grid-container">
+                    <div class="contrib-header">Contributions (Last 4 weeks):</div>
+                    <div class="contrib-weeks" id="contribution-graph">
+                        <!-- Javascript will dynamically inject rows with random colors matching green/cyan/purple levels -->
+                    </div>
+                    <div class="contrib-summary">
+                        Status: <span class="status">Active</span> | Total Commits: <span class="count">2,432</span> this season.
+                    </div>
+                </div>
+                <div class="terminal-line" style="margin-top: 20px;"><span class="terminal-prompt">neko-san:~$</span> <span class="cursor">_</span></div>
+            </div>
+        </section>
 
-    <!-- Featured Projects Grid Section -->
-    <section>
-      <h2 class="skills-arsenal-title" style="text-align: left; margin: 2rem 0 1rem 0;">FEATURED ARCHIVES</h2>
-      
-      <div class="skills-arsenal-grid">
-        
-        <!-- CitizenLink (D.R.I.M.S.) Card -->
-        <div class="skill-arsenal-card hologram-trigger" data-hologram-type="drims" onclick="openProjectModal('drims')">
-          <div class="card-badge local">THESIS</div>
-          <svg class="skill-icon-svg" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" style="image-rendering: pixelated;">
-            <rect x="2" y="2" width="12" height="12" fill="#00f0ff" />
-            <rect x="4" y="4" width="8" height="8" fill="#060913" />
-            <rect x="6" y="6" width="4" height="4" fill="#ff0055" />
-          </svg>
-          <div class="skill-name" style="margin-top: 0.5rem;">CitizenLink</div>
-          <div class="skill-sub">Web App</div>
-        </div>
+        <!-- Tech Stack Section -->
+        <section class="tech-stack-container">
+            <h2 class="tech-stack-title">Tech Stack</h2>
+            <div class="tech-grid">
+                <!-- Java -->
+                <div class="tech-card">
+                    <svg viewBox="0 0 16 16">
+                        <rect x="6" y="2" width="4" height="2" fill="#ff79c6"/>
+                        <rect x="5" y="4" width="6" height="5" fill="#f8f8f2"/>
+                        <rect x="4" y="6" width="8" height="1" fill="#8be9fd"/>
+                        <rect x="3" y="9" width="10" height="2" fill="#ff79c6"/>
+                        <rect x="5" y="11" width="6" height="1" fill="#f1fa8c"/>
+                    </svg>
+                    <span class="tech-name">Java</span>
+                    <span class="tech-desc">System</span>
+                </div>
+                <!-- Python -->
+                <div class="tech-card">
+                    <svg viewBox="0 0 16 16">
+                        <rect x="4" y="3" width="5" height="4" fill="#38bdf8"/>
+                        <rect x="7" y="7" width="5" height="4" fill="#facc15"/>
+                        <rect x="3" y="6" width="3" height="3" fill="#38bdf8"/>
+                        <rect x="10" y="5" width="3" height="3" fill="#facc15"/>
+                    </svg>
+                    <span class="tech-name">Python</span>
+                    <span class="tech-desc">Scripting</span>
+                </div>
+                <!-- Javascript -->
+                <div class="tech-card">
+                    <svg viewBox="0 0 16 16">
+                        <rect x="2" y="2" width="12" height="12" fill="#facc15"/>
+                        <rect x="7" y="6" width="2" height="2" fill="#0f1016"/>
+                        <rect x="9" y="8" width="1" height="4" fill="#0f1016"/>
+                        <rect x="6" y="10" width="3" height="2" fill="#0f1016"/>
+                    </svg>
+                    <span class="tech-name">JS</span>
+                    <span class="tech-desc">Web App</span>
+                </div>
+                <!-- Typescript -->
+                <div class="tech-card">
+                    <svg viewBox="0 0 16 16">
+                        <rect x="2" y="2" width="12" height="12" fill="#38bdf8"/>
+                        <rect x="4" y="4" width="8" height="2" fill="#0f1016"/>
+                        <rect x="8" y="6" width="2" height="6" fill="#0f1016"/>
+                    </svg>
+                    <span class="tech-name">TS</span>
+                    <span class="tech-desc">Frontend</span>
+                </div>
+                <!-- Kotlin -->
+                <div class="tech-card">
+                    <svg viewBox="0 0 16 16">
+                        <polygon points="2,2 8,2 2,8" fill="#a855f7"/>
+                        <polygon points="8,2 14,2 2,14" fill="#ec4899"/>
+                        <polygon points="2,14 14,14 14,2" fill="#e11d48"/>
+                    </svg>
+                    <span class="tech-name">Kotlin</span>
+                    <span class="tech-desc">Android</span>
+                </div>
+                <!-- C -->
+                <div class="tech-card">
+                    <svg viewBox="0 0 16 16">
+                        <rect x="4" y="3" width="8" height="2" fill="#f43f5e"/>
+                        <rect x="3" y="5" width="2" height="6" fill="#f43f5e"/>
+                        <rect x="4" y="11" width="8" height="2" fill="#f43f5e"/>
+                    </svg>
+                    <span class="tech-name">C</span>
+                    <span class="tech-desc">Low Level</span>
+                </div>
+                <!-- C++ -->
+                <div class="tech-card">
+                    <svg viewBox="0 0 16 16">
+                        <rect x="3" y="3" width="6" height="2" fill="#3b82f6"/>
+                        <rect x="2" y="5" width="2" height="6" fill="#3b82f6"/>
+                        <rect x="3" y="11" width="6" height="2" fill="#3b82f6"/>
+                        <!-- Plus signs for ++ -->
+                        <rect x="10" y="5" width="3" height="1" fill="#60a5fa"/>
+                        <rect x="11" y="4" width="1" height="3" fill="#60a5fa"/>
+                        <rect x="10" y="9" width="3" height="1" fill="#60a5fa"/>
+                        <rect x="11" y="8" width="1" height="3" fill="#60a5fa"/>
+                    </svg>
+                    <span class="tech-name">C++</span>
+                    <span class="tech-desc">Graphics</span>
+                </div>
+                <!-- C# -->
+                <div class="tech-card">
+                    <svg viewBox="0 0 16 16">
+                        <rect x="3" y="3" width="6" height="2" fill="#a855f7"/>
+                        <rect x="2" y="5" width="2" height="6" fill="#a855f7"/>
+                        <rect x="3" y="11" width="6" height="2" fill="#a855f7"/>
+                        <!-- Hash symbol -->
+                        <rect x="10" y="4" width="1" height="8" fill="#c084fc"/>
+                        <rect x="12" y="4" width="1" height="8" fill="#c084fc"/>
+                        <rect x="9" y="6" width="5" height="1" fill="#c084fc"/>
+                        <rect x="9" y="9" width="5" height="1" fill="#c084fc"/>
+                    </svg>
+                    <span class="tech-name">C#</span>
+                    <span class="tech-desc">Engines</span>
+                </div>
+                <!-- Swift -->
+                <div class="tech-card">
+                    <svg viewBox="0 0 16 16">
+                        <path d="M2,14 C6,12 10,8 14,2 C12,6 8,10 2,14" stroke="#f97316" stroke-width="3" fill="none" stroke-linecap="round"/>
+                        <path d="M5,13 C8,11 11,8 14,4 C11,7 8,9 5,13" stroke="#ffedd5" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+                    </svg>
+                    <span class="tech-name">Swift</span>
+                    <span class="tech-desc">iOS / OSx</span>
+                </div>
+                <!-- Golang -->
+                <div class="tech-card">
+                    <svg viewBox="0 0 16 16">
+                        <rect x="4" y="3" width="8" height="8" fill="#00add8" rx="2"/>
+                        <rect x="5" y="5" width="2" height="2" fill="#ffffff"/>
+                        <rect x="9" y="5" width="2" height="2" fill="#ffffff"/>
+                        <rect x="5" y="6" width="1" height="1" fill="#000000"/>
+                        <rect x="9" y="6" width="1" height="1" fill="#000000"/>
+                        <rect x="7" y="11" width="2" height="3" fill="#fbd38d"/>
+                    </svg>
+                    <span class="tech-name">Go</span>
+                    <span class="tech-desc">Backend</span>
+                </div>
+            </div>
+        </section>
 
-        <!-- 3D Color Game Card -->
-        <div class="skill-arsenal-card hologram-trigger" data-hologram-type="colorgame" onclick="openProjectModal('colorgame')">
-          <div class="card-badge local">PHYSICS</div>
-          <svg class="skill-icon-svg" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" style="image-rendering: pixelated;">
-            <rect x="3" y="3" width="10" height="10" fill="#bd00ff" />
-            <rect x="5" y="5" width="2" height="2" fill="#fff" />
-            <rect x="9" y="9" width="2" height="2" fill="#fff" />
-          </svg>
-          <div class="skill-name" style="margin-top: 0.5rem;">Perya Sim</div>
-          <div class="skill-sub">Simulation</div>
-        </div>
+        <!-- Social Contact Footer -->
+        <section class="contact-container">
+            <h3 class="contact-title">Sync Protocol</h3>
+            <div class="contact-links">
+                <a href="mailto:pyrrhuselcidgo@gmail.com" class="contact-link">
+                    <span>✉</span> Email
+                </a>
+                <a href="https://github.com/neko-san1432" target="_blank" class="contact-link">
+                    <span>🐙</span> GitHub
+                </a>
+                <a href="#" class="contact-link">
+                    <span>💬</span> Discord
+                </a>
+                <a href="#" class="contact-link">
+                    <span>🔗</span> LinkedIn
+                </a>
+            </div>
+        </section>
+    </main>
 
-        <!-- Predator Bot EA Card -->
-        <div class="skill-arsenal-card under-maintenance hologram-trigger" data-hologram-type="predator" onclick="openProjectModal('predator')">
-          <div class="card-badge maintenance">MAINT</div>
-          <svg class="skill-icon-svg" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" style="image-rendering: pixelated;">
-            <rect x="2" y="7" width="12" height="2" fill="#ff0055" />
-            <rect x="7" y="2" width="2" height="12" fill="#ff0055" />
-          </svg>
-          <div class="skill-name" style="margin-top: 0.5rem;">Predator</div>
-          <div class="skill-sub">MQL5 / EA</div>
-        </div>
-
-      </div>
-    </section>
-
-  </main>
-
-  <!-- Interactive Project Details Modal -->
-  <div class="modal-overlay" id="project-modal">
-    <div class="modal-content">
-      <button class="modal-close" id="modal-close-btn">X</button>
-      <div class="modal-body">
-        <h2 class="modal-title" id="modal-title-el">Project Title</h2>
-        <div class="modal-subtitle" id="modal-subtitle-el">Project Subtitle</div>
-        <div id="modal-desc-el"></div>
-        <div class="modal-section">
-          <div class="modal-section-title">CORE INTEGRATIONS</div>
-          <div class="skills-grid" id="modal-tech-el"></div>
-        </div>
-        <div class="modal-links">
-          <a href="#" target="_blank" class="modal-btn" id="modal-github-link">
-            <span>ACCESS FILES</span> [→]
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <footer class="hud-footer">
-    <div class="hud-footer-status">> TERMINAL STATUS: ONLINE // SYSTEM DEPLOYMENT READY</div>
-    <div>&copy; 2026 neko-san1432. Dedicated to those worthy to be shown.</div>
-  </footer>
-
-  <script src="app.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>
