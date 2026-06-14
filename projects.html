@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>neko-san1432 // ARCHIVE DATABASE</title>
+  <meta name="description" content="Operational project repository query console for neko-san1432.">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body>
+
+  <!-- Cyber HUD Header -->
+  <header class="hud-header">
+    <div class="logo-container">
+      <a href="index.html" class="hud-logo">NEKO_SYS_v2.0</a>
+    </div>
+    <nav class="hud-nav">
+      <a href="index.html" class="nav-link">CONSOLE</a>
+      <a href="projects.html" class="nav-link active">ARCHIVES</a>
+      <a href="about.html" class="nav-link">DOSSIER</a>
+    </nav>
+    <div class="system-status">
+      <span class="status-dot"></span>
+      <span>SECURE_LINK [CONNECTED]</span>
+    </div>
+  </header>
+
+  <!-- Main Grid Layout -->
+  <main class="main-container">
+    
+    <section class="hud-panel" style="padding: 1.5rem 2.5rem 0.5rem 2.5rem;">
+      <h1 class="glitch-title" style="font-size: 2.2rem; margin-bottom: 0.5rem;">PROJECT ARCHIVES</h1>
+      <p class="tagline">Query the active database of system implementations and repositories.</p>
+    </section>
+
+    <!-- Query Filter Bar -->
+    <section class="filter-bar">
+      <input type="text" id="project-search" class="search-input" placeholder="RUN QUERY (Search title, tag, or tech stack...)">
+      
+      <div class="filter-btn-group">
+        <button class="filter-btn active" data-filter="all">ALL_RECORDS</button>
+        <button class="filter-btn" data-filter="local">LOCAL_ONLY</button>
+        <button class="filter-btn" data-filter="github">GITHUB_ONLY</button>
+        <button class="filter-btn" data-filter="systems">SYSTEMS_ENG</button>
+      </div>
+    </section>
+
+    <!-- Dynamic Cards Output -->
+    <section class="projects-grid" id="projects-container">
+      <!-- Generated Dynamically by app.js -->
+    </section>
+
+  </main>
+
+  <!-- Interactive Project Details Modal -->
+  <div class="modal-overlay" id="project-modal">
+    <div class="modal-content">
+      <button class="modal-close" id="modal-close-btn">X</button>
+      <div class="modal-body">
+        <h2 class="modal-title" id="modal-title-el">Project Title</h2>
+        <div class="modal-subtitle" id="modal-subtitle-el">Project Subtitle</div>
+        <div id="modal-desc-el"></div>
+        <div class="modal-section">
+          <div class="modal-section-title">CORE INTEGRATIONS</div>
+          <div class="skills-grid" id="modal-tech-el"></div>
+        </div>
+        <div class="modal-links">
+          <a href="#" target="_blank" class="modal-btn" id="modal-github-link">
+            <span>ACCESS FILES</span> [→]
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="hud-footer">
+    <div class="hud-footer-status">> ARCHIVE DATABASE QUERY STATUS: LOADED</div>
+    <div>&copy; 2026 neko-san1432. Dedicated to those worthy to be shown.</div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
