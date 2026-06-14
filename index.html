@@ -107,60 +107,67 @@
       </div>
     </div>
 
-    <!-- Retro Terminal Interface -->
-    <div class="terminal">
-      <div class="terminal-header-bar">
-        <div class="terminal-dot td-red"></div>
-        <div class="terminal-dot td-yellow"></div>
-        <div class="terminal-dot td-green"></div>
-        <div class="terminal-title">neko-san@system: ~</div>
-      </div>
-      <div class="terminal-body" id="terminal-body">
-        <div class="terminal-line"><span class="prompt">neko-san:~$</span> <span class="command">neofetch</span></div>
-        <div style="display: flex; gap: 40px; flex-wrap: wrap; margin-bottom: 15px; align-items: center;">
-          <!-- Inline ASCII Art of blinking cat -->
-          <pre style="color: var(--neon-cyan); font-weight: bold; font-size: 14px; line-height: 1.2; margin: 0;">
-   /\_/\  
-  (='v'=) 
-  (")_(")~
-          </pre>
-          <div>
-            <div style="color: var(--neon-cyan); font-weight: bold;">OS: <span style="color: var(--text-primary); font-weight: normal;">NekoOS v1.4.32</span></div>
-            <div style="color: var(--neon-cyan); font-weight: bold;">USER: <span style="color: var(--text-primary); font-weight: normal;">neko-san1432</span></div>
-            <div style="color: var(--neon-cyan); font-weight: bold;">ROLES: <span style="color: var(--text-primary); font-weight: normal;">Full Stack Dev // Sys Engineer // Quant Eng</span></div>
-            <div style="color: var(--neon-cyan); font-weight: bold;">STATUS: <span style="color: var(--neon-green); font-weight: bold;">ONLINE / READY</span></div>
-          </div>
-          <!-- Face Slot -->
-          <div style="margin-left: auto;">
-            <!-- If face.png exists, show it. Otherwise, show fallback placeholder. -->
-            <img src="face.png" alt="[FACE]" class="pixel-avatar" onerror="this.style.display='none'; document.getElementById('face-placeholder-index').style.display='flex';">
-            <div id="face-placeholder-index" class="avatar-placeholder" style="display: none;">
-              [ ADD FACE.PNG ]
+    <!-- Formal Cyberpunk Profile HUD -->
+    <div class="card-retro" style="padding: 40px; margin-top: 20px; box-shadow: 0 0 25px rgba(0, 240, 255, 0.2);">
+      <div style="display: flex; gap: 40px; flex-wrap: wrap; align-items: flex-start;">
+        
+        <!-- Left Side: Formal Profile Photo slot & Core Stats -->
+        <div style="flex: 1; min-width: 280px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 20px;">
+          <!-- Custom Pixel Art Avatar Container -->
+          <div style="position: relative;">
+            <img src="face.png" alt="Neko-San's Photo" class="pixel-avatar" style="width: 180px; height: 180px;" onerror="this.style.display='none'; document.getElementById('face-placeholder-main').style.display='flex';">
+            <div id="face-placeholder-main" class="avatar-placeholder" style="display: none; width: 180px; height: 180px; font-size: 10px;">
+              [ RENAME PHOTO TO FACE.PNG ]
+            </div>
+            <!-- Absolute positioned small paw badges -->
+            <div style="position: absolute; bottom: -10px; right: -10px; width: 32px; height: 32px; background-color: var(--bg-header); border: 2px solid var(--neon-cyan); border-radius: 50%; padding: 4px; display: flex; align-items: center; justify-content: center;">
+              🐾
             </div>
           </div>
-        </div>
 
-        
-        <div class="terminal-line"><span class="prompt">neko-san:~$</span> <span class="command">diagnostics --all</span></div>
-        <div style="margin-bottom: 15px;">
-          <div>&gt; Loading database configurations... <span style="color: var(--neon-green)">[OK]</span></div>
-          <div>&gt; Deploying neural networks... <span style="color: var(--neon-green)">[OK]</span></div>
-          <div>&gt; Active modules found: 3</div>
-          <div style="padding-left: 15px; color: var(--neon-yellow);">
-            - CITIZENLINK 2.0 (D.R.I.M.S.) [THESIS] [HYBRID NLP / DBSCAN HEATMAP]<br>
-            - 3D COLOR GAME SIMULATOR [THREEJS / RAPIER3D / PERYA]<br>
-            - PREDATOR BOT EA [QUANT ENG] <span style="color: var(--neon-magenta)">[UNDER MAINTENANCE]</span>
+          <div style="border-top: 2px solid var(--border-color); width: 100%; padding-top: 15px;">
+            <div style="font-family: var(--font-pixel); font-size: 10px; color: var(--neon-magenta); margin-bottom: 8px;">CORE_STATUS:</div>
+            <div style="font-size: 24px; color: var(--neon-green); font-weight: bold; letter-spacing: 1px;">&gt; ACTIVE_ONLINE</div>
           </div>
         </div>
-        
-        <div class="terminal-line"><span class="prompt">neko-san:~$</span> <span class="command">cat readme.txt</span></div>
-        <div style="margin-bottom: 15px;">
-          "Welcome to my retro-cyber terminal deck. I construct high-reliability full-stack applications, physical mechanics simulators, and quantitative trading systems. Select target modules from the directory panel to audit code and view specifications."
+
+        <!-- Right Side: Structured Professional Introduction -->
+        <div style="flex: 2; min-width: 320px; display: flex; flex-direction: column; gap: 20px;">
+          <div>
+            <h2 style="font-size: 20px; color: var(--neon-cyan); margin-bottom: 10px;">SYSTEMS ARCHITECT & QUANT ENGINEER</h2>
+            <p style="font-size: 22px; line-height: 1.5; color: var(--text-primary);">
+              I build reliable full-stack architectures, quantitative trade execution systems, and 3D physical modeling engines. Backed by solid math modeling, NLP classification systems, and client-side physics engines.
+            </p>
+          </div>
+
+          <!-- Highlight Core Technologies in formal layout -->
+          <div style="background-color: var(--bg-darker); border: 2px solid var(--border-color); padding: 20px;">
+            <h3 style="font-size: 12px; color: var(--neon-yellow); margin-bottom: 15px;">PRIMARY ENGINE LANGUAGES:</h3>
+            <div style="display: flex; flex-wrap: wrap; gap: 15px; font-family: var(--font-pixel); font-size: 10px;">
+              <span style="color: var(--neon-cyan);">&gt; GOLANG</span>
+              <span style="color: var(--neon-cyan);">&gt; PYTHON</span>
+              <span style="color: var(--neon-cyan);">&gt; C++</span>
+              <span style="color: var(--neon-cyan);">&gt; TS / JS</span>
+              <span style="color: var(--neon-cyan);">&gt; C#</span>
+              <span style="color: var(--neon-cyan);">&gt; SWIFT</span>
+              <span style="color: var(--neon-cyan);">&gt; KOTLIN</span>
+            </div>
+          </div>
+
+          <!-- Quick Highlight of Key Projects -->
+          <div>
+            <h3 style="font-size: 12px; color: var(--neon-magenta); margin-bottom: 10px;">FEATURED SYSTEMS:</h3>
+            <ul style="list-style: none; padding-left: 10px; display: flex; flex-direction: column; gap: 8px; font-size: 18px;">
+              <li><span style="color: var(--neon-green)">■</span> <strong>D.R.I.M.S (CitizenLink 2.0)</strong> — LGU Complaint analytics using DBSCAN Heatmaps and NLP.</li>
+              <li><span style="color: var(--neon-green)">■</span> <strong>3D Color Game Simulator</strong> — Rapier3D physics-based simulation of Filipino Perya Game dice.</li>
+              <li><span style="color: var(--neon-yellow)">■</span> <strong>Predator Bot EA</strong> — Quantitative strategy backtesting engine (MQL5 / MT5).</li>
+            </ul>
+          </div>
         </div>
 
-        <div class="terminal-line"><span class="prompt">neko-san:~$</span> <span class="cursor"></span></div>
       </div>
     </div>
+
 
     <!-- Quick Action / Level Select -->
     <div style="text-align: center; margin-top: 40px;">
